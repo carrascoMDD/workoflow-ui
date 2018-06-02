@@ -1,39 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="13.1">
-  <zoom_level>8</zoom_level>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>856</x>
-      <y>440</y>
-      <w>120</w>
-      <h>48</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;remote&gt;&gt;
-Applications
-Repository</panel_attributes>
-    <additional_attributes/>
-  </element>
+  <zoom_level>7</zoom_level>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>800</x>
-      <y>448</y>
-      <w>104</w>
-      <h>40</h>
+      <x>665</x>
+      <y>462</y>
+      <w>63</w>
+      <h>28</h>
     </coordinates>
     <panel_attributes>lt=-()
-m2=applications
-</panel_attributes>
-    <additional_attributes>70.0;20.0;10.0;20.0</additional_attributes>
+m2=apps</panel_attributes>
+    <additional_attributes>70.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>856</x>
-      <y>200</y>
-      <w>120</w>
-      <h>48</h>
+      <x>840</x>
+      <y>238</y>
+      <w>105</w>
+      <h>42</h>
     </coordinates>
     <panel_attributes>&lt;&lt;remote&gt;&gt;
 Courtesy
@@ -43,23 +29,23 @@ LoginsRepository</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>800</x>
-      <y>208</y>
-      <w>72</w>
-      <h>40</h>
+      <x>665</x>
+      <y>245</y>
+      <w>189</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=-()
 m2=logins
 </panel_attributes>
-    <additional_attributes>70.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>250.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>640</x>
-      <y>192</y>
-      <w>96</w>
-      <h>48</h>
+      <x>525</x>
+      <y>231</y>
+      <w>84</w>
+      <h>42</h>
     </coordinates>
     <panel_attributes>courtesy Logins
 Provider
@@ -70,10 +56,10 @@ logins</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>728</x>
-      <y>208</y>
-      <w>88</w>
-      <h>40</h>
+      <x>602</x>
+      <y>245</y>
+      <w>77</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=)-
 
@@ -83,10 +69,10 @@ logins</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>640</x>
-      <y>448</y>
-      <w>96</w>
-      <h>32</h>
+      <x>525</x>
+      <y>455</y>
+      <w>84</w>
+      <h>28</h>
     </coordinates>
     <panel_attributes>Applications
 Provider</panel_attributes>
@@ -95,10 +81,10 @@ Provider</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>728</x>
-      <y>448</y>
-      <w>88</w>
-      <h>40</h>
+      <x>602</x>
+      <y>455</y>
+      <w>77</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=)-
 
@@ -108,10 +94,10 @@ Provider</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>856</x>
-      <y>136</y>
-      <w>120</w>
-      <h>48</h>
+      <x>840</x>
+      <y>182</y>
+      <w>105</w>
+      <h>42</h>
     </coordinates>
     <panel_attributes>&lt;&lt;remote&gt;&gt;
 Authentication</panel_attributes>
@@ -120,23 +106,23 @@ Authentication</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>800</x>
-      <y>144</y>
-      <w>104</w>
-      <h>40</h>
+      <x>665</x>
+      <y>189</y>
+      <w>189</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=-()
 m2=authenticate
 </panel_attributes>
-    <additional_attributes>70.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>250.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>728</x>
-      <y>144</y>
-      <w>88</w>
-      <h>40</h>
+      <x>602</x>
+      <y>189</y>
+      <w>77</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=)-
 
@@ -146,10 +132,10 @@ m2=authenticate
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>640</x>
-      <y>128</y>
-      <w>96</w>
-      <h>48</h>
+      <x>525</x>
+      <y>175</y>
+      <w>84</w>
+      <h>42</h>
     </coordinates>
     <panel_attributes>Authentication
 Provider
@@ -160,10 +146,10 @@ authentications</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>272</x>
-      <y>128</y>
-      <w>88</w>
-      <h>112</h>
+      <x>203</x>
+      <y>175</y>
+      <w>77</w>
+      <h>98</h>
     </coordinates>
     <panel_attributes>&lt;&lt;page&gt;&gt;
 Login</panel_attributes>
@@ -172,10 +158,10 @@ Login</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>352</x>
-      <y>200</y>
-      <w>304</w>
-      <h>40</h>
+      <x>273</x>
+      <y>238</y>
+      <w>266</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 getAllLogins()
@@ -185,10 +171,10 @@ getAllLogins()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>120</x>
-      <y>128</y>
-      <w>88</w>
-      <h>112</h>
+      <x>70</x>
+      <y>175</y>
+      <w>77</w>
+      <h>98</h>
     </coordinates>
     <panel_attributes>&lt;&lt;template&gt;&gt;
 Login
@@ -203,10 +189,10 @@ password</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>200</x>
-      <y>136</y>
-      <w>88</w>
-      <h>32</h>
+      <x>140</x>
+      <y>182</y>
+      <w>77</w>
+      <h>28</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 logins</panel_attributes>
@@ -215,10 +201,10 @@ logins</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>200</x>
-      <y>360</y>
-      <w>88</w>
-      <h>32</h>
+      <x>140</x>
+      <y>378</y>
+      <w>77</w>
+      <h>28</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 onLogin()</panel_attributes>
@@ -227,10 +213,10 @@ onLogin()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>352</x>
-      <y>136</y>
-      <w>304</w>
-      <h>40</h>
+      <x>273</x>
+      <y>182</y>
+      <w>266</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 authenticate( username, password)
@@ -240,10 +226,10 @@ authenticate( username, password)
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>640</x>
-      <y>312</y>
-      <w>128</w>
-      <h>64</h>
+      <x>525</x>
+      <y>336</y>
+      <w>112</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>UserData
 --
@@ -256,10 +242,10 @@ IdentityActivation[]
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>352</x>
-      <y>232</y>
-      <w>304</w>
-      <h>96</h>
+      <x>273</x>
+      <y>266</y>
+      <w>266</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 login( Authentication)</panel_attributes>
@@ -268,10 +254,10 @@ login( Authentication)</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>120</x>
-      <y>520</y>
-      <w>88</w>
-      <h>56</h>
+      <x>70</x>
+      <y>518</y>
+      <w>77</w>
+      <h>49</h>
     </coordinates>
     <panel_attributes>&lt;&lt;template&gt;&gt;
 Templates
@@ -282,10 +268,10 @@ list of templates</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>272</x>
-      <y>520</y>
-      <w>88</w>
-      <h>56</h>
+      <x>203</x>
+      <y>518</y>
+      <w>77</w>
+      <h>49</h>
     </coordinates>
     <panel_attributes>&lt;&lt;page&gt;&gt;
 Templates
@@ -296,48 +282,35 @@ templatespecs</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>192</x>
-      <y>528</y>
-      <w>104</w>
-      <h>32</h>
+      <x>133</x>
+      <y>525</y>
+      <w>91</w>
+      <h>28</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 templatespecs</panel_attributes>
     <additional_attributes>100.0;20.0;20.0;20.0</additional_attributes>
   </element>
   <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>856</x>
-      <y>520</y>
-      <w>120</w>
-      <h>48</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;remote&gt;&gt;
-Templates
-Repository</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
     <id>Relation</id>
     <coordinates>
-      <x>808</x>
-      <y>528</y>
-      <w>88</w>
-      <h>40</h>
+      <x>672</x>
+      <y>525</y>
+      <w>63</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=-()
-m2=templates
+m2=templs
 </panel_attributes>
     <additional_attributes>60.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>648</x>
-      <y>528</y>
-      <w>96</w>
-      <h>32</h>
+      <x>532</x>
+      <y>525</y>
+      <w>84</w>
+      <h>28</h>
     </coordinates>
     <panel_attributes>Templates
 Provider</panel_attributes>
@@ -346,10 +319,10 @@ Provider</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>736</x>
-      <y>528</y>
-      <w>88</w>
-      <h>40</h>
+      <x>609</x>
+      <y>525</y>
+      <w>77</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=)-
 
@@ -359,10 +332,10 @@ Provider</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>328</x>
-      <y>528</y>
-      <w>128</w>
-      <h>40</h>
+      <x>252</x>
+      <y>525</y>
+      <w>112</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 getTemplatespecs()
@@ -372,10 +345,10 @@ getTemplatespecs()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>120</x>
-      <y>288</y>
-      <w>88</w>
-      <h>112</h>
+      <x>70</x>
+      <y>315</y>
+      <w>77</w>
+      <h>98</h>
     </coordinates>
     <panel_attributes>&lt;&lt;template&gt;&gt;
 Identities
@@ -392,10 +365,10 @@ selected
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>272</x>
-      <y>288</y>
-      <w>88</w>
-      <h>112</h>
+      <x>203</x>
+      <y>315</y>
+      <w>77</w>
+      <h>98</h>
     </coordinates>
     <panel_attributes>&lt;&lt;page&gt;&gt;
 Identities
@@ -405,10 +378,10 @@ Filter</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>352</x>
-      <y>344</y>
-      <w>304</w>
-      <h>40</h>
+      <x>273</x>
+      <y>364</y>
+      <w>266</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 getIdentityActivations()
@@ -418,10 +391,10 @@ getIdentityActivations()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>808</x>
-      <y>320</y>
-      <w>64</w>
-      <h>32</h>
+      <x>672</x>
+      <y>343</y>
+      <w>56</w>
+      <h>28</h>
     </coordinates>
     <panel_attributes>lt=-()
 m2=
@@ -429,32 +402,12 @@ m2=
     <additional_attributes>60.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>856</x>
-      <y>288</y>
-      <w>120</w>
-      <h>120</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;local&gt;&gt;
-Identity Activation
-Storage
---
-list of pairs:
-_applicationKey
-_-identityKey
---
-read
-write</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
     <id>Relation</id>
     <coordinates>
-      <x>760</x>
-      <y>320</y>
-      <w>64</w>
-      <h>40</h>
+      <x>630</x>
+      <y>343</y>
+      <w>56</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=)-
 
@@ -464,10 +417,10 @@ write</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>120</x>
-      <y>8</y>
-      <w>432</w>
-      <h>96</h>
+      <x>70</x>
+      <y>70</y>
+      <w>392</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>Login page obtains list of courtesy Logins from provider. Presents selector.
 Login page on successful auth. invokes UserData with authenticated login.
@@ -481,10 +434,10 @@ UserData sets the active flag of the IdentityActivations from saved flags.</pane
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>664</x>
-      <y>232</y>
-      <w>96</w>
-      <h>96</h>
+      <x>546</x>
+      <y>266</y>
+      <w>84</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 getAllLogins()
@@ -494,10 +447,10 @@ getAllLogins()
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>576</x>
-      <y>8</y>
-      <w>400</w>
-      <h>96</h>
+      <x>553</x>
+      <y>70</y>
+      <w>392</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>Page IdentitiesFilter presents on/off 
 switches exposing the active flag of all the 
@@ -509,10 +462,10 @@ IdentityActivation in UserData (read/write).
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>360</x>
-      <y>448</y>
-      <w>144</w>
-      <h>32</h>
+      <x>280</x>
+      <y>455</y>
+      <w>126</w>
+      <h>28</h>
     </coordinates>
     <panel_attributes>/ActiveFilter/</panel_attributes>
     <additional_attributes/>
@@ -520,10 +473,10 @@ IdentityActivation in UserData (read/write).
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>496</x>
-      <y>528</y>
-      <w>168</w>
-      <h>40</h>
+      <x>399</x>
+      <y>525</y>
+      <w>147</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 getAllTemplatespecs()
@@ -533,10 +486,10 @@ getAllTemplatespecs()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>496</x>
-      <y>448</y>
-      <w>152</w>
-      <h>40</h>
+      <x>399</x>
+      <y>455</y>
+      <w>133</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 getAllApplications()
@@ -546,10 +499,10 @@ getAllApplications()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>480</x>
-      <y>368</y>
-      <w>176</w>
-      <h>96</h>
+      <x>385</x>
+      <y>385</y>
+      <w>154</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 getIdentityActivations()
@@ -559,10 +512,10 @@ getIdentityActivations()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>416</x>
-      <y>528</y>
-      <w>88</w>
-      <h>32</h>
+      <x>329</x>
+      <y>525</y>
+      <w>77</w>
+      <h>28</h>
     </coordinates>
     <panel_attributes>TemplatesFilter</panel_attributes>
     <additional_attributes/>
@@ -570,10 +523,10 @@ getIdentityActivations()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>416</x>
-      <y>472</y>
-      <w>24</w>
-      <h>72</h>
+      <x>329</x>
+      <y>476</y>
+      <w>21</w>
+      <h>63</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
@@ -581,10 +534,10 @@ getIdentityActivations()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>120</x>
-      <y>608</y>
-      <w>88</w>
-      <h>56</h>
+      <x>70</x>
+      <y>595</y>
+      <w>77</w>
+      <h>49</h>
     </coordinates>
     <panel_attributes>&lt;&lt;template&gt;&gt;
 Inbox
@@ -595,10 +548,10 @@ list of Task</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>272</x>
-      <y>608</y>
-      <w>88</w>
-      <h>56</h>
+      <x>203</x>
+      <y>595</y>
+      <w>77</w>
+      <h>49</h>
     </coordinates>
     <panel_attributes>&lt;&lt;page&gt;&gt;
 Inbox
@@ -609,35 +562,22 @@ inboxTasks</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>200</x>
-      <y>616</y>
-      <w>88</w>
-      <h>32</h>
+      <x>140</x>
+      <y>602</y>
+      <w>77</w>
+      <h>28</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 inboxTasks</panel_attributes>
     <additional_attributes>90.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>856</x>
-      <y>608</y>
-      <w>120</w>
-      <h>48</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;remote&gt;&gt;
-Tasks
-Repository</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
     <id>Relation</id>
     <coordinates>
-      <x>808</x>
-      <y>616</y>
-      <w>64</w>
-      <h>40</h>
+      <x>672</x>
+      <y>602</y>
+      <w>56</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=-()
 m2=tasks
@@ -647,10 +587,10 @@ m2=tasks
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>648</x>
-      <y>616</y>
-      <w>96</w>
-      <h>32</h>
+      <x>532</x>
+      <y>602</y>
+      <w>84</w>
+      <h>28</h>
     </coordinates>
     <panel_attributes>Inbox
 Provider</panel_attributes>
@@ -659,10 +599,10 @@ Provider</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>736</x>
-      <y>616</y>
-      <w>88</w>
-      <h>40</h>
+      <x>609</x>
+      <y>602</y>
+      <w>77</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=)-
 
@@ -672,10 +612,10 @@ Provider</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>328</x>
-      <y>616</y>
-      <w>128</w>
-      <h>40</h>
+      <x>252</x>
+      <y>602</y>
+      <w>112</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 getTemplatespecs()
@@ -685,10 +625,10 @@ getTemplatespecs()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>496</x>
-      <y>616</y>
-      <w>168</w>
-      <h>48</h>
+      <x>399</x>
+      <y>602</y>
+      <w>147</w>
+      <h>42</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 getTasksForGroupsAnd
@@ -699,10 +639,10 @@ _Identities()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>416</x>
-      <y>616</y>
-      <w>88</w>
-      <h>32</h>
+      <x>329</x>
+      <y>602</y>
+      <w>77</w>
+      <h>28</h>
     </coordinates>
     <panel_attributes>InboxFilter</panel_attributes>
     <additional_attributes/>
@@ -710,10 +650,10 @@ _Identities()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>432</x>
-      <y>472</y>
-      <w>24</w>
-      <h>160</h>
+      <x>343</x>
+      <y>476</y>
+      <w>21</w>
+      <h>140</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;180.0</additional_attributes>
@@ -721,10 +661,10 @@ _Identities()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>120</x>
-      <y>696</y>
-      <w>88</w>
-      <h>56</h>
+      <x>70</x>
+      <y>672</y>
+      <w>77</w>
+      <h>49</h>
     </coordinates>
     <panel_attributes>&lt;&lt;template&gt;&gt;
 Drafts
@@ -735,10 +675,10 @@ list of Drafs</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>272</x>
-      <y>696</y>
-      <w>88</w>
-      <h>56</h>
+      <x>203</x>
+      <y>672</y>
+      <w>77</w>
+      <h>49</h>
     </coordinates>
     <panel_attributes>&lt;&lt;page&gt;&gt;
 Drafts
@@ -749,10 +689,10 @@ drafts</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>200</x>
-      <y>704</y>
-      <w>88</w>
-      <h>32</h>
+      <x>140</x>
+      <y>679</y>
+      <w>77</w>
+      <h>28</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 drafts</panel_attributes>
@@ -761,10 +701,10 @@ drafts</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>808</x>
-      <y>704</y>
-      <w>64</w>
-      <h>40</h>
+      <x>672</x>
+      <y>679</y>
+      <w>56</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=-()
 m2=drafts
@@ -774,10 +714,10 @@ m2=drafts
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>648</x>
-      <y>704</y>
-      <w>96</w>
-      <h>32</h>
+      <x>532</x>
+      <y>679</y>
+      <w>84</w>
+      <h>28</h>
     </coordinates>
     <panel_attributes>Drafts
 Provider</panel_attributes>
@@ -786,10 +726,10 @@ Provider</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>736</x>
-      <y>704</y>
-      <w>88</w>
-      <h>40</h>
+      <x>609</x>
+      <y>679</y>
+      <w>77</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=)-
 
@@ -799,10 +739,10 @@ Provider</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>328</x>
-      <y>704</y>
-      <w>128</w>
-      <h>40</h>
+      <x>252</x>
+      <y>679</y>
+      <w>112</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 getTemplatespecs()
@@ -812,10 +752,10 @@ getTemplatespecs()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>488</x>
-      <y>704</y>
-      <w>184</w>
-      <h>40</h>
+      <x>392</x>
+      <y>679</y>
+      <w>161</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 getDraftsOwnedByIdentities()
@@ -825,21 +765,571 @@ getDraftsOwnedByIdentities()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>416</x>
-      <y>704</y>
-      <w>88</w>
-      <h>32</h>
+      <x>329</x>
+      <y>679</y>
+      <w>77</w>
+      <h>28</h>
     </coordinates>
     <panel_attributes>DraftsFilter</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>357</x>
+      <y>476</y>
+      <w>21</w>
+      <h>217</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;290.0</additional_attributes>
+  </element>
+  <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>856</x>
-      <y>672</y>
-      <w>120</w>
-      <h>80</h>
+      <x>70</x>
+      <y>742</y>
+      <w>77</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;template&gt;&gt;
+Archived
+--
+list of Archived 
+Tasks</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>203</x>
+      <y>749</y>
+      <w>77</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;page&gt;&gt;
+Archived
+--
+archivedTasks</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>140</x>
+      <y>756</y>
+      <w>77</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+archivedTasks</panel_attributes>
+    <additional_attributes>90.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>672</x>
+      <y>756</y>
+      <w>56</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-()
+m2=drafts
+</panel_attributes>
+    <additional_attributes>60.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>532</x>
+      <y>756</y>
+      <w>84</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>Archived
+Provider</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>609</x>
+      <y>756</y>
+      <w>77</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=)-
+
+</panel_attributes>
+    <additional_attributes>80.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>252</x>
+      <y>756</y>
+      <w>112</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+getTemplatespecs()
+&lt;- Templatespec[]</panel_attributes>
+    <additional_attributes>110.0;20.0;40.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>399</x>
+      <y>756</y>
+      <w>147</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+getTasksCompleted
+_ByIdentities()
+&lt;- Draft[]</panel_attributes>
+    <additional_attributes>190.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>329</x>
+      <y>756</y>
+      <w>77</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>ArchivedFilter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>70</x>
+      <y>910</y>
+      <w>77</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;template&gt;&gt;
+Outbox
+--
+list of Sent 
+Template
+instances</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>203</x>
+      <y>917</y>
+      <w>77</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;page&gt;&gt;
+Outbox
+--
+sent Template
+instances</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>140</x>
+      <y>924</y>
+      <w>77</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+archivedTasks</panel_attributes>
+    <additional_attributes>90.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>672</x>
+      <y>924</y>
+      <w>56</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-()
+m2=drafts
+</panel_attributes>
+    <additional_attributes>60.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>532</x>
+      <y>924</y>
+      <w>84</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>Outbox
+Provider</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>609</x>
+      <y>924</y>
+      <w>77</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=)-
+
+</panel_attributes>
+    <additional_attributes>80.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>252</x>
+      <y>924</y>
+      <w>112</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+getTemplatespecs()
+&lt;- Templatespec[]</panel_attributes>
+    <additional_attributes>110.0;20.0;40.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>399</x>
+      <y>924</y>
+      <w>147</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+getProcessesLaunched
+_ByIdentities()
+&lt;- Draft[]</panel_attributes>
+    <additional_attributes>190.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>329</x>
+      <y>924</y>
+      <w>77</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>OutboxFilter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>371</x>
+      <y>476</y>
+      <w>21</w>
+      <h>294</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;400.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>385</x>
+      <y>476</y>
+      <w>21</w>
+      <h>462</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;640.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>70</x>
+      <y>826</y>
+      <w>77</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;template&gt;&gt;
+Bounced
+--
+list of Bounced 
+Tasks</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>203</x>
+      <y>833</y>
+      <w>77</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;page&gt;&gt;
+Bounced
+--
+bouncedTasks</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>140</x>
+      <y>840</y>
+      <w>77</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+archivedTasks</panel_attributes>
+    <additional_attributes>90.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>672</x>
+      <y>840</y>
+      <w>56</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-()
+m2=drafts
+</panel_attributes>
+    <additional_attributes>60.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>532</x>
+      <y>840</y>
+      <w>84</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>Bounced
+Provider</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>609</x>
+      <y>840</y>
+      <w>77</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=)-
+
+</panel_attributes>
+    <additional_attributes>80.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>252</x>
+      <y>840</y>
+      <w>112</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+getTemplatespecs()
+&lt;- Templatespec[]</panel_attributes>
+    <additional_attributes>110.0;20.0;40.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>399</x>
+      <y>840</y>
+      <w>147</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+getTasksBounced
+_ByIdentities()
+&lt;- Draft[]</panel_attributes>
+    <additional_attributes>190.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>329</x>
+      <y>840</y>
+      <w>77</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>BouncedFilter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>840</x>
+      <y>448</y>
+      <w>105</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;remote&gt;&gt;
+Applications
+Repository</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>798</x>
+      <y>455</y>
+      <w>56</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-()
+m2=apps
+</panel_attributes>
+    <additional_attributes>60.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>763</x>
+      <y>455</y>
+      <w>49</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=)-
+
+</panel_attributes>
+    <additional_attributes>40.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>840</x>
+      <y>518</y>
+      <w>105</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;remote&gt;&gt;
+Templates
+Repository</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>798</x>
+      <y>532</y>
+      <w>63</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=-()
+m2=templs</panel_attributes>
+    <additional_attributes>60.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>763</x>
+      <y>525</y>
+      <w>49</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=)-
+
+</panel_attributes>
+    <additional_attributes>40.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>714</x>
+      <y>301</y>
+      <w>126</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;local&gt;&gt;
+Application and Identity
+Activation Storage
+--
+tree of:
+Applications-&gt;Identities
+--
+isActive
+setActive
+--
+read all
+write all</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>840</x>
+      <y>595</y>
+      <w>105</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;remote&gt;&gt;
+Tasks
+Repository</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>798</x>
+      <y>602</y>
+      <w>56</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-()
+m2=tasks
+</panel_attributes>
+    <additional_attributes>60.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>763</x>
+      <y>602</y>
+      <w>49</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=)-
+
+</panel_attributes>
+    <additional_attributes>40.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>798</x>
+      <y>679</y>
+      <w>56</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-()
+m2=drafts
+</panel_attributes>
+    <additional_attributes>60.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>763</x>
+      <y>679</y>
+      <w>49</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=)-
+
+</panel_attributes>
+    <additional_attributes>40.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>840</x>
+      <y>651</y>
+      <w>105</w>
+      <h>70</h>
     </coordinates>
     <panel_attributes>&lt;&lt;local&gt;&gt;
 Drafts Storage
@@ -853,62 +1343,10 @@ write</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>448</x>
-      <y>472</y>
-      <w>24</w>
-      <h>248</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;290.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>120</x>
-      <y>776</y>
-      <w>88</w>
-      <h>64</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;template&gt;&gt;
-Archived
---
-list of Archived 
-Tasks</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>272</x>
-      <y>784</y>
-      <w>88</w>
-      <h>56</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;page&gt;&gt;
-Archived
---
-archivedTasks</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>200</x>
-      <y>792</y>
-      <w>88</w>
-      <h>32</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;
-archivedTasks</panel_attributes>
-    <additional_attributes>90.0;20.0;10.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>808</x>
-      <y>792</y>
-      <w>64</w>
-      <h>40</h>
+      <x>798</x>
+      <y>756</y>
+      <w>56</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=-()
 m2=drafts
@@ -916,75 +1354,25 @@ m2=drafts
     <additional_attributes>60.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>648</x>
-      <y>792</y>
-      <w>96</w>
-      <h>32</h>
-    </coordinates>
-    <panel_attributes>Archived
-Provider</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
     <id>Relation</id>
     <coordinates>
-      <x>736</x>
-      <y>792</y>
-      <w>88</w>
-      <h>40</h>
+      <x>763</x>
+      <y>756</y>
+      <w>49</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=)-
 
 </panel_attributes>
-    <additional_attributes>80.0;20.0;10.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>328</x>
-      <y>792</y>
-      <w>128</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
-getTemplatespecs()
-&lt;- Templatespec[]</panel_attributes>
-    <additional_attributes>110.0;20.0;40.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>496</x>
-      <y>792</y>
-      <w>168</w>
-      <h>48</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
-getTasksCompleted
-_ByIdentities()
-&lt;- Draft[]</panel_attributes>
-    <additional_attributes>190.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>40.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>416</x>
-      <y>792</y>
-      <w>88</w>
-      <h>32</h>
-    </coordinates>
-    <panel_attributes>ArchivedFilter</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>856</x>
-      <y>784</y>
-      <w>120</w>
-      <h>48</h>
+      <x>840</x>
+      <y>749</y>
+      <w>105</w>
+      <h>42</h>
     </coordinates>
     <panel_attributes>&lt;&lt;remote&gt;&gt;
 Task History
@@ -992,55 +1380,12 @@ Repository</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>120</x>
-      <y>968</y>
-      <w>88</w>
-      <h>72</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;template&gt;&gt;
-Outbox
---
-list of Sent 
-Template
-instances</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>272</x>
-      <y>976</y>
-      <w>88</w>
-      <h>64</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;page&gt;&gt;
-Outbox
---
-sent Template
-instances</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
     <id>Relation</id>
     <coordinates>
-      <x>200</x>
-      <y>984</y>
-      <w>88</w>
-      <h>32</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;
-archivedTasks</panel_attributes>
-    <additional_attributes>90.0;20.0;10.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>808</x>
-      <y>984</y>
-      <w>64</w>
-      <h>40</h>
+      <x>798</x>
+      <y>924</y>
+      <w>56</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=-()
 m2=drafts
@@ -1048,75 +1393,25 @@ m2=drafts
     <additional_attributes>60.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>648</x>
-      <y>984</y>
-      <w>96</w>
-      <h>32</h>
-    </coordinates>
-    <panel_attributes>Outbox
-Provider</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
     <id>Relation</id>
     <coordinates>
-      <x>736</x>
-      <y>984</y>
-      <w>88</w>
-      <h>40</h>
+      <x>763</x>
+      <y>924</y>
+      <w>49</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=)-
 
 </panel_attributes>
-    <additional_attributes>80.0;20.0;10.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>328</x>
-      <y>984</y>
-      <w>128</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
-getTemplatespecs()
-&lt;- Templatespec[]</panel_attributes>
-    <additional_attributes>110.0;20.0;40.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>496</x>
-      <y>984</y>
-      <w>168</w>
-      <h>48</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
-getProcessesLaunched
-_ByIdentities()
-&lt;- Draft[]</panel_attributes>
-    <additional_attributes>190.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>40.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>416</x>
-      <y>984</y>
-      <w>88</w>
-      <h>32</h>
-    </coordinates>
-    <panel_attributes>OutboxFilter</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>856</x>
-      <y>976</y>
-      <w>120</w>
-      <h>48</h>
+      <x>840</x>
+      <y>917</y>
+      <w>105</w>
+      <h>42</h>
     </coordinates>
     <panel_attributes>&lt;&lt;remote&gt;&gt;
 Process History
@@ -1126,73 +1421,10 @@ Repository</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>464</x>
-      <y>472</y>
-      <w>24</w>
-      <h>336</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;400.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>480</x>
-      <y>472</y>
-      <w>24</w>
-      <h>528</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;640.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>120</x>
-      <y>872</y>
-      <w>88</w>
-      <h>64</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;template&gt;&gt;
-Bounced
---
-list of Bounced 
-Tasks</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>272</x>
-      <y>880</y>
-      <w>88</w>
-      <h>56</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;page&gt;&gt;
-Bounced
---
-bouncedTasks</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>200</x>
-      <y>888</y>
-      <w>88</w>
-      <h>32</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;
-archivedTasks</panel_attributes>
-    <additional_attributes>90.0;20.0;10.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>808</x>
-      <y>888</y>
-      <w>64</w>
-      <h>40</h>
+      <x>798</x>
+      <y>840</y>
+      <w>56</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=-()
 m2=drafts
@@ -1200,79 +1432,96 @@ m2=drafts
     <additional_attributes>60.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>648</x>
-      <y>888</y>
-      <w>96</w>
-      <h>32</h>
-    </coordinates>
-    <panel_attributes>Bounced
-Provider</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
     <id>Relation</id>
     <coordinates>
-      <x>736</x>
-      <y>888</y>
-      <w>88</w>
-      <h>40</h>
+      <x>763</x>
+      <y>840</y>
+      <w>49</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=)-
 
 </panel_attributes>
-    <additional_attributes>80.0;20.0;10.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>328</x>
-      <y>888</y>
-      <w>128</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
-getTemplatespecs()
-&lt;- Templatespec[]</panel_attributes>
-    <additional_attributes>110.0;20.0;40.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>496</x>
-      <y>888</y>
-      <w>168</w>
-      <h>48</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
-getTasksBounced
-_ByIdentities()
-&lt;- Draft[]</panel_attributes>
-    <additional_attributes>190.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>40.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>416</x>
-      <y>888</y>
-      <w>88</w>
-      <h>32</h>
-    </coordinates>
-    <panel_attributes>BouncedFilter</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>856</x>
-      <y>880</y>
-      <w>120</w>
-      <h>48</h>
+      <x>840</x>
+      <y>833</y>
+      <w>105</w>
+      <h>42</h>
     </coordinates>
     <panel_attributes>&lt;&lt;remote&gt;&gt;
 Task History
 Repository</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>714</x>
+      <y>448</y>
+      <w>56</w>
+      <h>511</h>
+    </coordinates>
+    <panel_attributes>*Façade*
+--
+*Circuit*
+*Breaker*
+--
+remote
+--
+Offline
+Storage
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>749</x>
+      <y>980</y>
+      <w>70</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;browser&gt;&gt;
+IndexedDB
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>665</x>
+      <y>980</y>
+      <w>70</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;browser&gt;&gt;
+localStorage</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>756</x>
+      <y>952</y>
+      <w>21</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>714</x>
+      <y>952</y>
+      <w>21</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
