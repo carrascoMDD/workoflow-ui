@@ -38,7 +38,7 @@ import { App, NavController, ModalController, ViewController } from 'ionic-angul
 @Component({
   template: `
     <ion-list>
-      <button ion-item (click)="close('https://github.com/carrascoMDD/flowable-ionic4angular6-inbox01')">GitHub Repo</button>
+      <button ion-item (click)="close('https://github.com/carrascoMDD/workoflow-ui')">GitHub Repo</button>
       <button ion-item (click)="support()">Support</button>
     </ion-list>
   `

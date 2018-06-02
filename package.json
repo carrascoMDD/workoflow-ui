@@ -1,5 +1,5 @@
 {
-    "name": "flowable-ionic4angular6-inbox01",
+    "name": "workoflow-ui",
     "version": "0.0.1",
     "description": "Local installs of cordova and ionic to avoid breaking this or other ionic apps upon any update of global install (it's known to happen).",
     "keywords": [
@@ -16,9 +16,9 @@
         "angular6",
         "cordova"
     ],
-    "homepage": "http://github.com/carrascoMDD/flowable-ionic4angular6-inbox01",
+    "homepage": "http://github.com/carrascoMDD/workoflow-ui",
     "bugs": {
-        "url": "http://github.com/carrascoMDD/flowable-ionic4angular6-inbox01/issues"
+        "url": "http://github.com/carrascoMDD/workoflow-ui/issues"
     },
     "license": "EUPL-1.1",
     "author": {
@@ -31,7 +31,7 @@
     "man": null,
     "repository": {
         "type": "git",
-        "url": "http://github.com/carrascoMDD/flowable-ionic4angular6-inbox01.git"
+        "url": "http://github.com/carrascoMDD/workoflow-ui.git"
     },
     "scripts": {},
     "config": {},

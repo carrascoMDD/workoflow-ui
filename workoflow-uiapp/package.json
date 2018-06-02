@@ -16,9 +16,9 @@
         "angular6",
         "cordova"
     ],
-    "homepage": "http://github.com/carrascoMDD/flowable-ionic4angular6-inbox01",
+    "homepage": "http://github.com/carrascoMDD/workoflow-ui",
     "bugs": {
-        "url": "http://github.com/carrascoMDD/flowable-ionic4angular6-inbox01/issues"
+        "url": "http://github.com/carrascoMDD/workoflow-ui/issues"
     },
     "license": "EUPL-1.1",
     "author": {
@@ -27,7 +27,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "http://github.com/carrascoMDD/flowable-ionic4angular6-inbox01.git"
+        "url": "http://github.com/carrascoMDD/workoflow-ui.git"
     },
     "maintainers": [
         {
