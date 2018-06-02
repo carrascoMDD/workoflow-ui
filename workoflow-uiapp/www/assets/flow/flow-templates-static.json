@@ -1,0 +1,43 @@
+{
+  "data": [
+    {
+      "id": "flowableplay01:1:7161cdc2-6318-11e8-aaa5-227d0f96bf59",
+      "url": "http://localhost:8080/process-api/repository/process-definitions/flowableplay01:1:7161cdc2-6318-11e8-aaa5-227d0f96bf59",
+      "key": "flowableplay01",
+      "version": 1,
+      "name": "FlowablePlay01 BPMN2",
+      "description": null,
+      "tenantId": "",
+      "deploymentId": "713825ae-6318-11e8-aaa5-227d0f96bf59",
+      "deploymentUrl": "http://localhost:8080/process-api/repository/deployments/713825ae-6318-11e8-aaa5-227d0f96bf59",
+      "resource": "http://localhost:8080/process-api/repository/deployments/713825ae-6318-11e8-aaa5-227d0f96bf59/resources//home/acv/Works/MDD/flowableboot01/SVNs_flowableboot01/flowableboot01_trunk/flowableboot01/target/classes/processes/flowableplay01.bpmn20.xml",
+      "diagramResource": null,
+      "category": "http://www.flowable.org/processdef",
+      "graphicalNotationDefined": false,
+      "suspended": false,
+      "startFormDefined": false
+    },
+    {
+      "id": "7161f4d3-6318-11e8-aaa5-227d0f96bf59",
+      "url": "http://localhost:8080/process-api/repository/process-definitions/7161f4d3-6318-11e8-aaa5-227d0f96bf59",
+      "key": "proc_ShippingExchange_AnnouncePayload",
+      "version": 1,
+      "name": "Shipping Exchange Announce Payload",
+      "description": null,
+      "tenantId": "",
+      "deploymentId": "713825ae-6318-11e8-aaa5-227d0f96bf59",
+      "deploymentUrl": "http://localhost:8080/process-api/repository/deployments/713825ae-6318-11e8-aaa5-227d0f96bf59",
+      "resource": "http://localhost:8080/process-api/repository/deployments/713825ae-6318-11e8-aaa5-227d0f96bf59/resources//home/acv/Works/MDD/flowableboot01/SVNs_flowableboot01/flowableboot01_trunk/flowableboot01/target/classes/processes/ShippingExchange_AnnouncePayload.bpmn",
+      "diagramResource": "http://localhost:8080/process-api/repository/deployments/713825ae-6318-11e8-aaa5-227d0f96bf59/resources//home/acv/Works/MDD/flowableboot01/SVNs_flowableboot01/flowableboot01_trunk/flowableboot01/target/classes/processes/ShippingExchange_AnnouncePayload.proc_ShippingExchange_AnnouncePayload.png",
+      "category": "http://www.modeldd.org/flowableboot01",
+      "graphicalNotationDefined": true,
+      "suspended": false,
+      "startFormDefined": false
+    }
+  ],
+  "total": 2,
+  "start": 0,
+  "sort": "name",
+  "order": "asc",
+  "size": 2
+}

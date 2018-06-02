@@ -1,6 +1,6 @@
 # workOflow : workoflow-ui
 
-**workOflow Single-page-application and hybrid Android/iOS app playground with Ionic3 Angular6 on  Flowable REST API as Spring Boot Java application.**
+**Single-Page-Application and hybrid Android/iOS app with Ionic3/Angular6 over Flowable REST API/Spring Boot/Java in local ionic & cordova.**
 
 Note that the outer package 
 https://github.com/carrascoMDD/workoflow-ui

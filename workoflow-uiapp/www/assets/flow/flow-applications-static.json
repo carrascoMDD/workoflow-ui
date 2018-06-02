@@ -1,0 +1,115 @@
+[
+    {
+        "_v_Type": "Application",
+        "name": "Flowable Play 01",
+        "key": "appFlowableplay01",
+        "processSpecs": [
+            {
+                "_v_Type": "ProcessSpec",
+                "name": "Flowable Play 01",
+                "key": "flowableplay01"
+            }
+        ],
+        "groups": [
+            {
+                "_v_Type": "ApplicationGroup",
+                "name": "Employees",
+                "key": "employees"
+            },
+            {
+                "_v_Type": "ApplicationGroup",
+                "name": "Managers",
+                "key": "managers"
+            },
+            {
+                "_v_Type": "ApplicationGroup",
+                "name": "Virtual Group initiable and participed with all Process Keys",
+                "key": "virtualAllProcessKeys",
+                "isVirtual": true,
+                "initiableProcessKeys":   [ "flowableplay01"],
+                "participedProcessKeys": [ "flowableplay01"]
+            }
+        ],
+        "identities": [
+            {
+                "_v_Type": "ApplicationIdentity",
+                "user": "userEmployee",
+                "groupKeys": [ "employees"]
+            },
+            {
+                "_v_Type": "ApplicationIdentity",
+                "user": "userManager",
+                "groupKeys": [ "managers", "employees"]
+            },
+            {
+                "_v_Type": "ApplicationIdentity",
+                "user": "userVirtualGroupAllProcessKeys",
+                "groupKeys": [ "virtualAllProcessKeys"]
+            }
+        ]
+    },
+    {
+        "_v_Type": "Application",
+        "name": "Shipping Exchange",
+        "key": "appShippingExchange",
+        "processSpecs": [
+            {
+                "_v_Type": "ProcessSpec",
+                "name": "Shipping Exchange Announce Payload",
+                "key": "proc_ShippingExchange_AnnouncePayload"
+            }
+        ],
+        "groups": [
+            {
+                "_v_Type": "ApplicationGroup",
+                "name": "Shipping Clients",
+                "key": "shippingClients"
+            },
+            {
+                "_v_Type": "ApplicationGroup",
+                "name": "Shipping Suppliers",
+                "key": "shippingSuppliers"
+            },
+            {
+                "_v_Type": "ApplicationGroup",
+                "name": "Registrars",
+                "key": "registrars"
+            },
+            {
+                "_v_Type": "ApplicationGroup",
+                "name": "Virtual Group initiable and participed with all Process Keys",
+                "key": "virtualAllProcessKeys",
+                "isVirtual": true,
+                "initiableProcessKeys":   [ "proc_ShippingExchange_AnnouncePayload"],
+                "participedProcessKeys": [ "proc_ShippingExchange_AnnouncePayload"]
+            }
+        ],
+        "identities": [
+            {
+                "_v_Type": "ApplicationIdentity",
+                "key": "userClientSupplierRegistrar",
+                "groupKeys": [ "shippingClients", "shippingSuppliers", "registrars"]
+            },
+            {
+                "_v_Type": "ApplicationIdentity",
+                "key": "userClient",
+                "groupKeys": [ "shippingClients"]
+            },
+            {
+                "_v_Type": "ApplicationIdentity",
+                "key": "userSupplier",
+                "groupKeys": [ "shippingSuppliers"]
+            },
+            {
+                "_v_Type": "ApplicationIdentity",
+                "key": "userRegistrar",
+                "groupKeys": [ "registrars"]
+            },
+            {
+                "_v_Type": "ApplicationIdentity",
+                "user": "userVirtualGroupAllProcessKeys",
+                "groupKeys": [ "virtualAllProcessKeys"]
+            }
+        ]
+    }
+]

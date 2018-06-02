@@ -1,5 +1,5 @@
-# workOflow :  workoflow-ui outer install
-**workOflow Installer for a Single-page-application and hybrid Android/iOS app playground with Ionic3 Angular6 on  Flowable REST API as Spring Boot Java application.**
+# workoflow-ui outer package for ionic and cordova install and inner package with app 
+**ionic & cordova install for Single-Page-Application and hybrid Android/iOS app with Ionic3/Angular6 over Flowable REST API/Spring Boot/Java**
 
 Local installs of cordova and ionic to avoid breaking this or other ionic apps upon any update of global install (it's known to happen).
 
