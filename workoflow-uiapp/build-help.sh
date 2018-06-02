@@ -30,3 +30,6 @@
 # **
 
 ../node_modules/.bin/ionic build --help
+
+cp ./src/assets/img/favicon/favicon.ico ./platforms/browser/www
+

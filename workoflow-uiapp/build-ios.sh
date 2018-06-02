@@ -32,3 +32,6 @@
 echo "Requires iOS SDK to be installed in the system to complete successfully"
 
 ../node_modules/.bin/ionic cordova build ios
+
+cp ./src/assets/img/favicon/favicon.ico ./platforms/browser/www
+

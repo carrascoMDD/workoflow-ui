@@ -30,3 +30,6 @@
 # **
 
 ../node_modules/.bin/ionic cordova build browser
+
+cp ./src/assets/img/favicon/favicon.ico ./platforms/browser/www
+
