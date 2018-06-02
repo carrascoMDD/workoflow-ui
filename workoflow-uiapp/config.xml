@@ -32,7 +32,7 @@ permissions and limitations under the Licence.
 -->
 
 <widget id="org.modeldd.workoflow" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>flowable-ionic4angular6-inbox01app</name>
+    <name>workoflow-uiapp</name>
     <description>Single-page-application and hybrid Android/iOS app playground with Ionic3 Angular6 on  Flowable REST API as Spring Boot Java application.</description>
     <author email="carrascomdd@gmail.com" href="http://workOflow.org">Antonio Carrasco Valero</author>
     <content src="index.html" />
