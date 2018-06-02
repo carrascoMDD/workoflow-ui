@@ -65,10 +65,12 @@ export class TutorialPage {
                       .then(
                           (theHasLoggedIn) => {
                               if( theHasLoggedIn) {
-                                  this.navCtrl.push( FlowTabsPage);
+                                  console.log( "TutorialPage startApp this.userData.hasLoggedIn() true");
+                                  this.navCtrl.setRoot( FlowTabsPage);
                               }
                               else {
-                                  this.navCtrl.push( LoginPage);
+                                  console.log( "TutorialPage startApp this.userData.hasLoggedIn() false");
+                                  this.navCtrl.setRoot( LoginPage);
                               }
                           },
                           ( theError) => {
@@ -94,12 +96,12 @@ export class TutorialPage {
 
   ionViewDidEnter() {
     // the root left menu should be disabled on the tutorial page
-    this.menu.enable(false);
+    // this.menu.enable(false);
   }
 
   ionViewDidLeave() {
     // enable the root left menu when leaving the tutorial page
-    this.menu.enable(true);
+    // this.menu.enable(true);
   }
 
 }

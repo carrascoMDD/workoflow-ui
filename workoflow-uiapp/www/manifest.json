@@ -1,6 +1,6 @@
 {
-  "name": "workOflow-ui by Antonio Carrasco Valero at ModelDD.org",
-  "short_name": "workOflow-ui",
+  "name": "workOflow by Antonio Carrasco Valero at ModelDD.org",
+  "short_name": "workOflow",
   "start_url": "index.html",
   "display": "standalone",
   "icons": [{

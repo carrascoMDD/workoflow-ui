@@ -31,46 +31,29 @@ permissions and limitations under the Licence.
 -->
 
 <ion-header no-border>
-  <ion-navbar>
-    <ion-buttons end *ngIf="showSkip">
-      <button ion-button (click)="startApp()" color="primary">Skip</button>
-    </ion-buttons>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-buttons end *ngIf="showSkip">
+            <button ion-button (click)="startApp()" color="primary">Skip</button>
+        </ion-buttons>
+    </ion-navbar>
 </ion-header>
 
 <ion-content no-bounce>
-  <ion-slides #slides (ionSlideWillChange)="onSlideChangeStart($event)" pager>
-
-    <ion-slide>
-      <img src="assets/img/ica-slidebox-img-1.png" class="slide-image"/>
-      <h2 class="slide-title">
-        Welcome to <b>workOflow</b>
-      </h2>
-      <p>
-        .
-      </p>
-    </ion-slide>
-
-    <ion-slide>
-      <img src="assets/img/ica-slidebox-img-2.png" class="slide-image"/>
-      <h2 class="slide-title" >What is workOflow?</h2>
-      <p><b>workOflow</b></p>
-    </ion-slide>
-
-    <ion-slide>
-      <img src="assets/img/ica-slidebox-img-3.png" class="slide-image"/>
-      <h2 class="slide-title">What is workOflow?</h2>
-      <p><b>workOflow</b></p>
-    </ion-slide>
-
-    <ion-slide>
-      <img src="assets/img/ica-slidebox-img-4.png" class="slide-image"/>
-      <h2 class="slide-title">Ready to Play?</h2>
-      <button ion-button icon-end large clear (click)="startApp()">
-        Continue
-        <ion-icon name="arrow-forward"></ion-icon>
-      </button>
-    </ion-slide>
-
-  </ion-slides>
+    <ion-slides #slides (ionSlideWillChange)="onSlideChangeStart($event)" pager>
+        
+        <ion-slide>
+            
+            <div class="logo">
+                <img src="assets/img/logo/workOflow-logo-plain.svg" alt="FlowWork Logo">
+            </div>
+            
+            <h2 class="slide-title">Ready to Play?</h2>
+            
+            <button ion-button icon-end large clear (click)="startApp()">
+                Continue
+                <ion-icon name="arrow-forward"></ion-icon>
+            </button>
+        </ion-slide>
+    
+    </ion-slides>
 </ion-content>

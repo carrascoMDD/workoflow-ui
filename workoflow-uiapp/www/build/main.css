@@ -41021,3 +41021,14 @@ page-tutorial p {
 page-tutorial p b {
   color: #000000;
 }
+
+page-tutorial .logo {
+  padding: 10px 10px 10px 10px;
+  min-width: 100px;
+  text-align: center;
+}
+
+page-tutorial .logo img {
+  min-width: 50px;
+  max-width: 80%;
+}
