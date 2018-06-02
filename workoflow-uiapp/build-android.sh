@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# * run.sh
+# * build-android.sh
 # *
-# * Created @author Antonio Carrasco Valero 201805252222
+# * Created @author Antonio Carrasco Valero 201806020629
 # *
 # *
 # ***************************************************************************
@@ -27,9 +27,8 @@
 # {{Licensed1}}
 # {{Licensed2}}
 #
-# ***************************************************************************
+# **
 
+echo "Requires android SDK to be installed in the system to complete successfully"
 
-
-../node_modules/.bin/ionic serve
-
+../node_modules/.bin/ionic cordova build android

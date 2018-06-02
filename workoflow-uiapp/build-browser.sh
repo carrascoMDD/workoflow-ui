@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# * run.sh
+# * build-browser.sh
 # *
-# * Created @author Antonio Carrasco Valero 201805252222
+# * Created @author Antonio Carrasco Valero 201806020623
 # *
 # *
 # ***************************************************************************
@@ -27,9 +27,6 @@
 # {{Licensed1}}
 # {{Licensed2}}
 #
-# ***************************************************************************
+# **
 
-
-
-../node_modules/.bin/ionic serve
-
+../node_modules/.bin/ionic cordova build browser
