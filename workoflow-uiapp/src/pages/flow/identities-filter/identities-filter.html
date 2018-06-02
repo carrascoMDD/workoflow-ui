@@ -1,0 +1,73 @@
+<!--
+* identities-filter.html
+*
+* Created @author Antonio Carrasco Valero 201805252222
+*
+*
+***************************************************************************
+
+Copyright 2018 Antonio Carrasco Valero
+workOflow Single-page-application and hybrid Android/iOS app playground with Ionic3 Angular6 on  Flowable REST API as Spring Boot Java application.
+
+Licensed under the EUPL, Version 1.1 only (the "Licence");
+You may not use this work except in compliance with the
+Licence.
+You may obtain a copy of the Licence at:
+https://joinup.ec.europa.eu/software/page/eupl/licence-eupl
+Unless required by applicable law or agreed to in
+writing, software distributed under the Licence is
+distributed on an "AS IS" basis,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+express or implied.
+See the Licence for the specific language governing
+permissions and limitations under the Licence.
+{{License2}}
+
+{{Licensed1}}
+{{Licensed2}}
+
+***************************************************************************
+*
+-->
+
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons start>
+            <button ion-button (click)="dismiss()">Cancel</button>
+        </ion-buttons>
+        <ion-title>
+            Application Identities
+        </ion-title>
+        <ion-buttons end>
+            <button ion-button (click)="applyFilters()" strong>Done</button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="outer-content">
+    
+    <ion-list>
+        <ion-list-header>Activate / Deactivate</ion-list-header>
+        <ion-row>
+            <ion-col col-6>
+                <div text-center>
+                    <button ion-button round color="danger" (click)="deactivateAllIdentities()">None</button>
+                </div>
+            </ion-col>
+            <ion-col col-6>
+                <div text-center>
+                    <button ion-button round color="secondary" (click)="activateAllIdentities()">All</button>
+                </div>
+            </ion-col>
+        </ion-row>
+        <ion-item *ngFor="let identityActivation of identityActivations" [attr.compositeKey]="(identityActivation.applicationKey + '_-_' + identityActivation.identityKey) | lowercase">
+            <span item-start class="dot"></span>
+            <ion-label>{{identityActivation.applicationKey}} {{identityActivation.identityKey}}</ion-label>
+            <ion-toggle [(ngModel)]="identityActivation.isActive"
+                        (click)="identityActiveChanged(identityActivation.applicationKey, identityActivation.identityKey)"
+                        color="secondary"></ion-toggle>
+        </ion-item>
+    
+    </ion-list>
+
+</ion-content>

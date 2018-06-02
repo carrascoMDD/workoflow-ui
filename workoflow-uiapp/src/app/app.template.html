@@ -1,0 +1,145 @@
+<!--
+* app.template.html
+*
+* Created @author Antonio Carrasco Valero 201805252222
+*
+*
+***************************************************************************
+
+Copyright 2018 Antonio Carrasco Valero
+workOflow Single-page-application and hybrid Android/iOS app playground with Ionic3 Angular6 on  Flowable REST API as Spring Boot Java application.
+
+Licensed under the EUPL, Version 1.1 only (the "Licence");
+You may not use this work except in compliance with the
+Licence.
+You may obtain a copy of the Licence at:
+https://joinup.ec.europa.eu/software/page/eupl/licence-eupl
+Unless required by applicable law or agreed to in
+writing, software distributed under the Licence is
+distributed on an "AS IS" basis,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+express or implied.
+See the Licence for the specific language governing
+permissions and limitations under the Licence.
+{{License2}}
+
+{{Licensed1}}
+{{Licensed2}}
+
+***************************************************************************
+*
+-->
+
+
+<!-- OJO ACV <ion-split-pane> removed to have the menu show and hide  -->
+
+<!-- logged out menu -->
+<ion-menu id="loggedOutMenu" [content]="content">
+    
+    <ion-header>
+        <ion-toolbar>
+            <button ion-button menuToggle>
+                <ion-icon name="menu"></ion-icon>
+            </button>
+            <ion-title>Menu</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    
+    <ion-content class="outer-content">
+    
+        <div class="logo">
+            <img src="assets/img/logo/workOflow-logo-plain.svg" alt="FlowWork Logo">
+        </div>
+        
+        <ion-list>
+            <ion-list-header>
+                Work (flow) - please login
+            </ion-list-header>
+            <button disabled ion-item menuClose *ngFor="let p of flowPages" (click)="openPage(p)">
+                <ion-icon item-start [name]="p.icon" [color]="isActive(p)"></ion-icon>
+                {{p.title}}
+            </button>
+        </ion-list>
+        
+        <ion-list>
+            <ion-list-header>
+                Account
+            </ion-list-header>
+            <button ion-item menuClose *ngFor="let p of loggedOutPages" (click)="openPage(p)">
+                <ion-icon item-start [name]="p.icon" [color]="isActive(p)"></ion-icon>
+                {{p.title}}
+            </button>
+        </ion-list>
+        
+        <ion-list>
+            <ion-list-header>
+                Tutorial
+            </ion-list-header>
+            <button ion-item menuClose (click)="openTutorial()">
+                <ion-icon item-start name="hammer"></ion-icon>
+                Show Tutorial
+            </button>
+        </ion-list>
+    </ion-content>
+
+</ion-menu>
+
+
+
+<!-- logged in menu -->
+<ion-menu id="loggedInMenu" [content]="content">
+    
+    <ion-header>
+        <ion-toolbar>
+            <button ion-button menuToggle>
+                <ion-icon name="menu"></ion-icon>
+            </button>
+            <ion-title>Menu</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    
+    <ion-content class="outer-content">
+    
+        <div class="logo">
+            <img src="assets/img/logo/workOflow-logo-plain.svg" alt="FlowWork Logo">
+        </div>
+        
+        <ion-list>
+            <ion-list-header>
+                Work (flow)
+            </ion-list-header>
+            <button ion-item menuClose *ngFor="let p of flowPages" (click)="openPage(p)">
+                <ion-icon item-start [name]="p.icon" [color]="isActive(p)"></ion-icon>
+                {{p.title}}
+            </button>
+        </ion-list>
+        
+        
+        <ion-list>
+            <ion-list-header>
+                Account
+            </ion-list-header>
+            <button ion-item menuClose *ngFor="let p of loggedInPages" (click)="openPage(p)">
+                <ion-icon item-start [name]="p.icon" [color]="''"></ion-icon>
+                {{p.title}}
+            </button>
+        </ion-list>
+        
+        <ion-list>
+            <ion-list-header>
+                Tutorial
+            </ion-list-header>
+            <button ion-item menuClose (click)="openTutorial()">
+                <ion-icon item-start name="hammer"></ion-icon>
+                Show Tutorial
+            </button>
+        </ion-list>
+    
+    </ion-content>
+
+</ion-menu>
+
+<!-- main navigation -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false" main name="app"></ion-nav>
+
+<!-- OJO ACV <ion-split-pane> removed to have the menu show and hide  -->

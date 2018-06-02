@@ -1,0 +1,69 @@
+<!--
+* account.html
+*
+* Created @author Antonio Carrasco Valero 201805252222
+*
+*
+***************************************************************************
+
+Copyright 2018 Antonio Carrasco Valero
+workOflow Single-page-application and hybrid Android/iOS app playground with Ionic3 Angular6 on  Flowable REST API as Spring Boot Java application.
+
+Licensed under the EUPL, Version 1.1 only (the "Licence");
+You may not use this work except in compliance with the
+Licence.
+You may obtain a copy of the Licence at:
+https://joinup.ec.europa.eu/software/page/eupl/licence-eupl
+Unless required by applicable law or agreed to in
+writing, software distributed under the Licence is
+distributed on an "AS IS" basis,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+express or implied.
+See the Licence for the specific language governing
+permissions and limitations under the Licence.
+{{License2}}
+
+{{Licensed1}}
+{{Licensed2}}
+
+***************************************************************************
+*
+-->
+
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Account - workOflow</ion-title>
+    
+        <ion-buttons end>
+            <button ion-button icon-only (click)="presentFilter()">
+                <ion-icon ios="ios-options-outline" md="md-options"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="outer-content">
+    
+    <div class="logo">
+        <img src="assets/img/logo/workOflow-logo-plain.svg" alt="FlowWork Logo">
+    </div>
+    
+    <div padding-top text-center *ngIf="authenticatedLogin">
+        <img src="http://www.gravatar.com/avatar?d=mm&s=140" alt="avatar">
+        
+        
+        <h2>{{authenticatedLogin.login}}</h2>
+        <h3>{{authenticatedLogin.name}} {{authenticatedLogin.familyName}}</h3>
+        
+        <ion-list inset>
+            <button ion-item (click)="updatePicture()">Update Picture</button>
+            <button ion-item (click)="changeUsername()">Change Username</button>
+            <button ion-item (click)="changePassword()">Change Password</button>
+            <button ion-item (click)="support()">Support</button>
+            <button ion-item (click)="logout()">Logout</button>
+        </ion-list>
+    </div>
+</ion-content>

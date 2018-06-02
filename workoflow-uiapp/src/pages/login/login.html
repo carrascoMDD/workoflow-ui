@@ -1,0 +1,90 @@
+<!--
+* login.html
+*
+* Created @author Antonio Carrasco Valero 201805252222
+*
+*
+***************************************************************************
+
+Copyright 2018 Antonio Carrasco Valero
+workOflow Single-page-application and hybrid Android/iOS app playground with Ionic3 Angular6 on  Flowable REST API as Spring Boot Java application.
+
+Licensed under the EUPL, Version 1.1 only (the "Licence");
+You may not use this work except in compliance with the
+Licence.
+You may obtain a copy of the Licence at:
+https://joinup.ec.europa.eu/software/page/eupl/licence-eupl
+Unless required by applicable law or agreed to in
+writing, software distributed under the Licence is
+distributed on an "AS IS" basis,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+express or implied.
+See the Licence for the specific language governing
+permissions and limitations under the Licence.
+{{License2}}
+
+{{Licensed1}}
+{{Licensed2}}
+
+***************************************************************************
+*
+-->
+
+<ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+		<ion-title>Login to workOflow</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+	<div class="logo">
+        <img src="assets/img/logo/workOflow-logo-plain.svg" alt="FlowWork Logo">
+	</div>
+
+
+	<form #loginForm="ngForm" novalidate>
+  
+		<ion-list no-lines>
+            
+            <ion-item>
+                <ion-icon name="person" item-start></ion-icon>
+                <ion-label>Courtesy demo logins</ion-label>
+                <ion-select name="login_select" [(ngModel)]="selectedLogin" (ionChange)="courtesyLoginSelected()">
+                    <ion-option *ngFor="let aLogin of logins" [value]="aLogin" >{{ aLogin.login}}</ion-option>
+                </ion-select>
+            </ion-item>
+            
+			<ion-item>
+				<ion-label stacked color="primary">Username</ion-label>
+				<ion-input [(ngModel)]="login.username" name="username" type="text" #username="ngModel" spellcheck="false" autocapitalize="off"
+					required>
+				</ion-input>
+			</ion-item>
+			<p ion-text [hidden]="username.valid || submitted == false" color="danger" padding-left>
+				Username is required
+			</p>
+
+			<ion-item>
+				<ion-label stacked color="primary">Password</ion-label>
+				<ion-input [(ngModel)]="login.password" name="password" type="password" #password="ngModel" required>
+				</ion-input>
+			</ion-item>
+			<p ion-text [hidden]="password.valid || submitted == false" color="danger" padding-left>
+				Password is required
+			</p>
+		</ion-list>
+
+		<ion-row responsive-sm>
+			<ion-col>
+				<button ion-button (click)="onLogin(loginForm)" type="submit" block>Login</button>
+			</ion-col>
+			<ion-col>
+				<button ion-button (click)="onSignup()" color="light" block>Signup</button>
+			</ion-col>
+		</ion-row>
+	</form>
+
+</ion-content>

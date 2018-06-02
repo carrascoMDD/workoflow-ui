@@ -1,0 +1,10 @@
+.idea
+node_modules
+package-lock.json
+withstarter-aws
+withstarter-blank
+withstarter-conference
+withstarter-sidemenu
+withstarter-tabs
+withstarter-tutorial
+

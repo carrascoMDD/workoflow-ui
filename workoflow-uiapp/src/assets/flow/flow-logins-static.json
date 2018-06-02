@@ -1,0 +1,92 @@
+[
+    {
+        "_v_Type": "Login",
+        "login": "jcbs@acme.com",
+        "name": "John Carlos",
+        "familyName": "Bauer Sanchez",
+        "loginApplications": [
+            {
+                "_v_Type": "LoginApplication",
+                "applicationKey": "appFlowableplay01",
+                "identityKeys": [
+                    "userEmployee", "userManager", "userVirtualGroupAllProcessKeys"
+                ]
+            },
+            {
+                "_v_Type": "LoginApplication",
+                "applicationKey": "appShippingExchange",
+                "identityKeys": [
+                    "userClient", "userSupplier", "userRegistrar", "userVirtualGroupAllProcessKeys"
+                ]
+            }
+        ]
+    },
+    {
+        "_v_Type": "Login",
+        "login": "lbs@nasa.com",
+        "name": "Luis Brandon",
+        "familyName": "Smith",
+        "loginApplications": [
+            {
+                "_v_Type": "LoginApplication",
+                "applicationKey": "appFlowableplay01",
+                "identityKeys": [
+                    "userEmployee"
+                ]
+            },
+            {
+                "_v_Type": "LoginApplication",
+                "applicationKey": "appShippingExchange",
+                "identityKeys": [
+                    "userRegistrar"
+                ]
+            }
+        ]
+    },
+    {
+        "_v_Type": "Login",
+        "login": "LiChi@hu.com",
+        "name": "Chi",
+        "familyName": "Li",
+        "loginApplications": [
+            {
+                "_v_Type": "LoginApplication",
+                "applicationKey": "appFlowableplay01",
+                "identityKeys": [
+                    "userManager"
+                ]
+            }
+        ]
+    },
+    {
+        "_v_Type": "Login",
+        "login": "Hansolo@stars.war",
+        "name": "Hanso",
+        "familyName": "Lo",
+        "loginApplications": [
+            {
+                "_v_Type": "LoginApplication",
+                "applicationKey": "appFlowableplay01",
+                "identityKeys": [
+                    "userVirtualGroupAllProcessKeys"
+                ]
+            }
+        ]
+    },
+    {
+        "_v_Type": "Login",
+        "login": "Chby@hai.ry",
+        "name": "Chub",
+        "familyName": "Bytheway",
+        "loginApplications": [
+            {
+                "_v_Type": "LoginApplication",
+                "applicationKey": "appShippingExchange",
+                "identityKeys": [
+                    "userVirtualGroupAllProcessKeys"
+                ]
+            }
+        ]
+    }
+]
+

@@ -1,0 +1,81 @@
+<!--
+* about.html
+*
+* Created @author Antonio Carrasco Valero 201805252222
+*
+*
+***************************************************************************
+
+Copyright 2018 Antonio Carrasco Valero
+workOflow Single-page-application and hybrid Android/iOS app playground with Ionic3 Angular6 on  Flowable REST API as Spring Boot Java application.
+
+Licensed under the EUPL, Version 1.1 only (the "Licence");
+You may not use this work except in compliance with the
+Licence.
+You may obtain a copy of the Licence at:
+https://joinup.ec.europa.eu/software/page/eupl/licence-eupl
+Unless required by applicable law or agreed to in
+writing, software distributed under the Licence is
+distributed on an "AS IS" basis,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+express or implied.
+See the Licence for the specific language governing
+permissions and limitations under the Licence.
+{{License2}}
+
+{{Licensed1}}
+{{Licensed2}}
+
+***************************************************************************
+*
+-->
+
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>About workOflow</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="presentPopover($event)">
+                <ion-icon name="more"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <div class="logo">
+        <img src="assets/img/logo/workOflow-logo-plain.svg" alt="FlowWork Logo">
+    </div>
+    <div padding class="about-info">
+        <h4>workOflow presenting near you shortly</h4>
+        
+        <ion-list no-lines>
+            <ion-item>
+                <ion-icon name="calendar" item-start></ion-icon>
+                <ion-label>Presentation date</ion-label>
+                <ion-datetime displayFormat="MMM DD, YYYY" max="2020" [(ngModel)]="presentationDate"></ion-datetime>
+            </ion-item>
+            
+            <ion-item>
+                <ion-icon name="pin" item-start></ion-icon>
+                <ion-label>Location</ion-label>
+                <ion-select>
+                    <ion-option value="valencia" selected>Valencia, ES</ion-option>
+                    <ion-option value="bonn">Bonn, DE</ion-option>
+                    <ion-option value="madrid" >Madrid, ES</ion-option>
+                    <ion-option value="birmingham">Birmingham, UK</ion-option>
+                    <ion-option value="miami">Miami, FL, US</ion-option>
+                    <ion-option value="newyork">New York City, NY, US</ion-option>
+                    <ion-option value="brest">Brest, FR</ion-option>
+                </ion-select>
+            </ion-item>
+        </ion-list>
+        
+        <p>
+            <b>workOflow</b>
+        </p>
+        <p>Single-page-application and hybrid Android/iOS app playground with Ionic3 Angular6 on Flowable REST API as Spring Boot Java application.</p>
+    </div>
+</ion-content>

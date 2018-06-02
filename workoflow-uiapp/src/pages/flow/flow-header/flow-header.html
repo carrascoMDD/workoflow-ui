@@ -1,0 +1,73 @@
+<!--
+* flow-header.html
+*
+* Created @author Antonio Carrasco Valero 201806012216
+*
+*
+***************************************************************************
+
+Copyright 2018 Antonio Carrasco Valero
+workOflow Single-page-application and hybrid Android/iOS app playground with Ionic3 Angular6 on  Flowable REST API as Spring Boot Java application.
+
+Licensed under the EUPL, Version 1.1 only (the "Licence");
+You may not use this work except in compliance with the
+Licence.
+You may obtain a copy of the Licence at:
+https://joinup.ec.europa.eu/software/page/eupl/licence-eupl
+Unless required by applicable law or agreed to in
+writing, software distributed under the Licence is
+distributed on an "AS IS" basis,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+express or implied.
+See the Licence for the specific language governing
+permissions and limitations under the Licence.
+{{License2}}
+
+{{Licensed1}}
+{{Licensed2}}
+
+***************************************************************************
+*
+-->
+
+<ion-header class="page-flow-header">
+    <ion-navbar no-border-bottom>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        
+        
+        <ion-segment *ngIf="flowpage"
+                     [(ngModel)]="flowpage.segment" (ionChange)="flowpage.updateContent()">
+            
+            <ion-title class="hide-sms">
+                <ion-icon item-start [name]="flowpage.flowboxIcon" class="valignmiddle"></ion-icon>
+                <span class="hide-sm valignmiddle">{{flowpage.flowboxTitle}}</span>
+                <span class="hide-md valignmiddle">- workOflow</span>
+            </ion-title>
+            
+            <ion-segment-button value="all">
+                <ion-icon item-start name="reorder" class="valignmiddle"></ion-icon>
+                <span class="hide-sms valignmiddle">&nbsp;All</span>
+            </ion-segment-button>
+            <ion-segment-button value="favorites">
+                <ion-icon item-start name="star" class="valignmiddle"></ion-icon>
+                <span class="hide-sms valignmiddle">&nbsp;Favorites</span>
+            </ion-segment-button>
+        </ion-segment>
+        
+        <ion-buttons end *ngIf="flowpage">
+            <button ion-button icon-only (click)="flowpage.presentFilter()">
+                <ion-icon ios="ios-options-outline" md="md-options"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+    
+    <ion-toolbar no-border-top *ngIf="flowpage">
+        <ion-searchbar color="primary"
+                       [(ngModel)]="flowpage.queryText"
+                       (ionInput)="flowpage.updateContent()"
+                       placeholder="Search">
+        </ion-searchbar>
+    </ion-toolbar>
+</ion-header>
