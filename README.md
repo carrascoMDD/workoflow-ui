@@ -16,22 +16,27 @@ because cordova or ionic was installed globally and then updated.
 
 This way the project (and github repository) holds both the project to create the project, and the real app.
 
-Creation of the inner app was performed by running in bash shell:
+To install for first time, clone or download & unzip this repository from 
+https://github.com/carrascoMDD/workoflow-ui
 
 ~~~~
-# convenience shell function to run from npm node_modules bin
-function npm-do { (PATH=$(npm bin):$PATH; eval $@;) }
+cd workflow-ui
+npm install
+# shall install ionic3 and cordova8 which are the "outer" package dependencies
 
-npm-do ionic start workoflow-uiapp super
+cd workflow-uiapp
+npm install
+# shall install the UI application dependencies
+
+# then to run
+../node_modules/.bin/ionic serve
+# or alternatively with the supplied convenience bash shell script
+./run.sh
 ~~~~
 
-Then to run the application:
+Shall launch an ionic dev server running on http://localhost:8100/ and open a browser (tab) on that URL
 
-~~~~
-cd workoflow-uiapp
- ../node_modules/.bin/ionic serve
-~~~~
- 
+
 
 http://workOflow.org
 

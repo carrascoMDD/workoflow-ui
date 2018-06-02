@@ -52,17 +52,17 @@ import {FlowHeader} from "../flow-header/flow-header";
     templateUrl: 'flowbox.html'
 })
 export class FlowboxPage extends LoggedinPage {
-    @ViewChild( FlowHeader) flowheader: FlowHeader;
 
-    // Shall hold in concrete subtypes the inboxList List and not a reference to the controller element
-    // abstract contentsList: List;
+    @ViewChild( FlowHeader) flowheader: FlowHeader;
 
 
     flowboxTitle:   string;
     flowboxIcon:    string;
     segment:        string;
-    queryText :     string;
+    queryText:      string;
 
+    hasAnyFavoriteItem = false;
+    hasAnyUrgentItem   = false;
 
 
     constructor(

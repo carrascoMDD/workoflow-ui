@@ -37,7 +37,6 @@ import {Storage} from '@ionic/storage';
 
 import {AboutPage} from '../pages/about/about';
 import {LoginPage} from '../pages/login/login';
-// import { MapPage } from '../pages/map/map';
 import {SignupPage} from '../pages/signup/signup';
 import {TutorialPage} from '../pages/tutorial/tutorial';
 import {SupportPage} from '../pages/support/support';
@@ -53,6 +52,16 @@ import {TemplatesPage} from "../pages/flow/templates/templates";
 import {OutboxPage} from "../pages/flow/outbox/outbox";
 
 import {UserData} from '../providers/user-data';
+import {enableProdMode} from '@angular/core';
+
+
+/* ACV OJO DEBUG mode is default for Angular */
+const ENABLEPRODMODE = true;
+
+if( ENABLEPRODMODE) {
+    enableProdMode();
+}
+
 
 export interface PageInterface {
     title: string;

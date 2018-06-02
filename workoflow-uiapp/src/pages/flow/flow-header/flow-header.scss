@@ -60,6 +60,12 @@ permissions and limitations under the Licence.
         }
     }
 
+    .hide-smm {
+        @media (max-width: 480px) {
+            display: none;
+        }
+    }
+
     .valignmiddle {
         vertical-align: middle;
     }

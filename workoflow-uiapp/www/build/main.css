@@ -40393,6 +40393,12 @@ permissions and limitations under the Licence.
   }
 }
 
+@media (max-width: 480px) {
+  flow-header .hide-smm {
+    display: none;
+  }
+}
+
 flow-header .valignmiddle {
   vertical-align: middle;
 }

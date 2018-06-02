@@ -32,36 +32,49 @@ permissions and limitations under the Licence.
 
 <ion-header class="page-flow-header">
     <ion-navbar no-border-bottom>
+        
         <button ion-button menuToggle>
             <ion-icon name="menu"></ion-icon>
         </button>
         
         
-        <ion-segment *ngIf="flowpage"
-                     [(ngModel)]="flowpage.segment" (ionChange)="flowpage.updateContent()">
+        <ion-segment *ngIf="flowpage" [(ngModel)]="flowpage.segment" (ionChange)="flowpage.updateContent()">
             
-            <ion-title class="hide-sms">
-                <ion-icon item-start [name]="flowpage.flowboxIcon" class="valignmiddle"></ion-icon>
+            <ion-title class="hide-smm">
+                <ion-icon item-start [name]="flowpage.flowboxIcon" color="bright" class="valignmiddle"></ion-icon>
                 <span class="hide-sm valignmiddle">{{flowpage.flowboxTitle}}</span>
                 <span class="hide-md valignmiddle">- workOflow</span>
             </ion-title>
             
+            
             <ion-segment-button value="all">
-                <ion-icon item-start name="reorder" class="valignmiddle"></ion-icon>
+                <ion-icon item-start name="filing" class="valignmiddle"></ion-icon>
                 <span class="hide-sms valignmiddle">&nbsp;All</span>
             </ion-segment-button>
-            <ion-segment-button value="favorites">
+            
+            <ion-segment-button value="favorites" [disabled]="!flowpage.hasAnyFavoriteItem" >
                 <ion-icon item-start name="star" class="valignmiddle"></ion-icon>
                 <span class="hide-sms valignmiddle">&nbsp;Favorites</span>
             </ion-segment-button>
+            
+            <ion-segment-button value="urgent" [disabled]="!flowpage.hasAnyUrgentItem" >
+                <ion-icon item-start name="warning" class="valignmiddle"
+                          [color]="flowpage.hasAnyUrgentItem ? 'danger' : ''"></ion-icon>
+                <span class="hide-sms valignmiddle">&nbsp;Urgent</span>
+            </ion-segment-button>
+            
         </ion-segment>
+        
         
         <ion-buttons end *ngIf="flowpage">
             <button ion-button icon-only (click)="flowpage.presentFilter()">
                 <ion-icon ios="ios-options-outline" md="md-options"></ion-icon>
             </button>
         </ion-buttons>
+        
     </ion-navbar>
+    
+    
     
     <ion-toolbar no-border-top *ngIf="flowpage">
         <ion-searchbar color="primary"
@@ -70,4 +83,5 @@ permissions and limitations under the Licence.
                        placeholder="Search">
         </ion-searchbar>
     </ion-toolbar>
+    
 </ion-header>
