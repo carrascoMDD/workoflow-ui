@@ -31,9 +31,7 @@ permissions and limitations under the Licence.
  */
 
 import {Injectable} from '@angular/core';
-import {Http} from '@angular/http';
 import {Observable} from 'rxjs/Observable';
-import {UserData} from './user-data';
 
 import {HttpClient} from '@angular/common/http';
 
@@ -63,7 +61,7 @@ export class ApplicationsProvider {
 
 
 
-    constructor(public http: Http, public httpc: HttpClient, public user: UserData) {
+    constructor( public httpc: HttpClient) {
         console.log("ApplicationsProvider constructor");
     }
 

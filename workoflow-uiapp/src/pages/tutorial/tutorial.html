@@ -33,7 +33,7 @@ permissions and limitations under the Licence.
 <ion-header no-border>
     <ion-navbar>
         <ion-buttons end *ngIf="showSkip">
-            <button ion-button (click)="startApp()" color="primary">Skip</button>
+            <button ion-button (click)="tutorialCompleted()" color="primary">Skip</button>
         </ion-buttons>
     </ion-navbar>
 </ion-header>
@@ -49,7 +49,7 @@ permissions and limitations under the Licence.
             
             <h2 class="slide-title">Ready to Play?</h2>
             
-            <button ion-button icon-end large clear (click)="startApp()">
+            <button ion-button icon-end large clear (click)="tutorialCompleted()">
                 Continue
                 <ion-icon name="arrow-forward"></ion-icon>
             </button>

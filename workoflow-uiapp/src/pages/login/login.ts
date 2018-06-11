@@ -30,121 +30,163 @@ permissions and limitations under the Licence.
  *
  */
 
-import {Component} from '@angular/core';
-import {NgForm} from '@angular/forms';
-import {NavController} from 'ionic-angular';
-import {AlertController} from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { NgForm }               from '@angular/forms';
+import { NavController }        from 'ionic-angular';
+import { AlertController }      from 'ionic-angular';
+import { UserOptions } from '../../interfaces/user-options';
 
-import {UserData} from '../../providers/user-data';
-import {UserOptions} from '../../interfaces/user-options';
-import {FlowTabsPage} from '../flow/flowtabs-page/flowtabs-page';
-import {IAuthentication} from "../../interfaces/flow-iauthentication";
-import {ILogin} from "../../interfaces/flow-ilogins";
-import {LoginsProvider} from '../../providers/logins-provider';
-import {AuthenticationProvider} from '../../providers/authentication-provider';
+import { SignupPage }             from '../signup/signup';
+import { FlowTabsPage }           from '../flow/flowtabs-page/flowtabs-page';
+import { IAuthentication }        from "../../interfaces/flow-iauthentication";
+import { ILogin }                 from "../../interfaces/flow-ilogins";
+import { LoginsProvider }         from '../../providers/logins-provider';
+import { AuthenticationProvider } from '../../providers/authentication-provider';
+import { LoggedinProvider }       from '../../providers/loggedin-provider';
+import { LoginSelector }          from '../login-selector/login-selector';
 
 
 const MAXERRORLEN = 256;
 
-@Component({
-    selector: 'page-user',
+
+
+
+
+
+@Component(
+{
+    selector:    'page-login',
     templateUrl: 'login.html'
-})
+} )
 export class LoginPage {
 
-    login: UserOptions = { username: '', password: ''};
-    submitted = false;
+    @ViewChild( LoginSelector ) loginSelector: LoginSelector;
 
-    logins: ILogin[];
+    login: UserOptions = { username: '', password: '' };
 
     selectedLogin: ILogin;
+
+
 
 
     constructor(
         public navCtrl: NavController,
         public alertCtrl: AlertController,
-        public userData: UserData,
         public loginsProvider: LoginsProvider,
-        public authenticationProvider: AuthenticationProvider) {
-        console.log( "LoginPage constructor");
+        public authenticationProvider: AuthenticationProvider,
+        public loggedinProvider: LoggedinProvider ) {
+
+        console.log( "LoginPage constructor" );
     }
+
+
+
 
     ionViewDidLoad() {
-        this.loginsProvider.getAllLogins().subscribe(
-            ( theLogins) => {
-                this.logins = theLogins;
-            },
-            ( theError) => {
-                console.log( "LoginPage ionViewDidLoad loginsProvider.getAllLogins ERROR: " + theError);
-            });
-    }
-
-
-    courtesyLoginSelected(): void {
-        if( !this.selectedLogin) {
-            this.login.username = "";
-            this.login.password = "";
-            return;
-        }
-
-        this.login.username = this.selectedLogin.login;
-        this.login.password = "AnyPasswordGoes";
-
-        this.doLogin();
+        this.loginSelector.setLoginPage( this );
     }
 
 
 
-    doLogin() {
-        this.authenticationProvider.authenticate( this.login.username, this.login.password)
-            .subscribe(
-                ( theAuthentication : IAuthentication) => {
-                    this.userData.authenticationPerformed( theAuthentication).then(
-                        () => {
-                            this.navCtrl.push( FlowTabsPage);
-                        },
-                        ( theError) => {
-                            this.alertCtrl.create({
-                                title: 'Error after authentication',
-                                subTitle: theError.toString().substr( 0, MAXERRORLEN),
-                                buttons: [ 'Dismiss']
-                            });
-                        });
-                },
-                ( theError : any) => {
-                    this.alertCtrl.create({
-                        title: 'Error during authentication',
-                        subTitle: theError.toString().substr( 0, MAXERRORLEN),
-                        buttons: [ 'Dismiss']
-                    });
-                }
-        );
-    }
 
 
+    onLogin( form: NgForm ) {
 
-    onLogin(form: NgForm) {
-        this.submitted = true;
-
-        if (form.valid) {
+        if( form.valid ) {
             this.doLogin();
         }
     }
 
 
 
-    onSignup() {
-       this.userData.authenticationPerformed( null).then(
-            () => {
-                this.navCtrl.push( FlowTabsPage);
-            },
-            ( theError) => {
-                this.alertCtrl.create({
-                    title: 'Error after authentication',
-                    subTitle: theError.toString().substr( 0, MAXERRORLEN),
-                    buttons: [ 'Dismiss']
-                });
-            }
-        );
+
+    onSignup(): Promise<any> {
+        return this.navCtrl.push( SignupPage );
     }
+
+
+
+
+
+
+    loginSelected( theSelectedLogin: ILogin ): Promise<any> {
+        if( !theSelectedLogin ) {
+            this.login.username = "";
+            this.login.password = "";
+            return;
+        }
+
+        this.login.username = theSelectedLogin.login;
+        this.login.password = "AnyPasswordGoes";
+
+        /* As we have just "typed" values in the form,
+        allow onlookers (i.e. Selenium Protractor) to be able to see them in the "next tick"
+        before continuing with the doLogin.
+         */
+        return new Promise( ( pheResolve, pheReject ) => {
+            setTimeout(
+                () => {
+                    this.doLogin().then(
+                        ( pheResult ) => {
+                            pheResolve( pheResult );
+                        },
+                        ( theError ) => {
+                            pheReject( theError );
+                        } )
+                },
+                0
+            )
+        } );
+
+    }
+
+
+
+
+
+    doLogin(): Promise<any> {
+        return new Promise( ( pheResolve, pheReject ) => {
+
+            this.authenticationProvider.authenticate( this.login.username, this.login.password )
+                .subscribe(
+                    ( theAuthentication: IAuthentication ) => {
+                        this.loggedinProvider.authenticationPerformed( theAuthentication )
+                            .then(
+                                () => {
+                                    return this.navCtrl.push( FlowTabsPage );
+                                },
+                                ( theError ) => {
+                                    throw theError;
+                                }
+                            )
+                            .then(
+                                () => {
+                                    pheResolve();
+                                },
+                                ( theError ) => {
+                                    pheReject( theError );
+
+                                    this.alertCtrl.create( {
+                                                               title:    'Error after authentication',
+                                                               subTitle: theError.toString().substr( 0, MAXERRORLEN ),
+                                                               buttons:  [ 'Dismiss' ]
+                                                           } );
+                                }
+                            );
+                    },
+                    ( theError: any ) => {
+                        pheReject( theError );
+
+                        this.alertCtrl.create( {
+                                                   title:    'Error during authentication',
+                                                   subTitle: theError.toString().substr( 0, MAXERRORLEN ),
+                                                   buttons:  [ 'Dismiss' ]
+                                               } );
+                    }
+                );
+        } );
+    }
+
+
+
 }

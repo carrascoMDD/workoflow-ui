@@ -35,14 +35,13 @@ import {Component} from '@angular/core';
 import {
     AlertController,
     App,
-    FabContainer,
     ModalController,
     NavController,
     ToastController,
     LoadingController
 } from 'ionic-angular';
 
-import {UserData} from '../../../providers/user-data';
+import {LoggedinProvider} from '../../../providers/loggedin-provider';
 import {LoggedinPage} from '../loggedin/loggedin';
 
 
@@ -52,16 +51,17 @@ import {LoggedinPage} from '../loggedin/loggedin';
 })
 export class LogoutPage extends LoggedinPage {
 
+
     constructor(
         theApp: App,
         theAlertCtrl: AlertController,
-        theLoadingCtrl: LoadingController,
         theModalCtrl: ModalController,
-        theNavCtrl: NavController,
         theToastCtrl: ToastController,
-        theUserData: UserData
+        theLoadingCtrl: LoadingController,
+        theNavCtrl: NavController,
+        theLoggedinProvider: LoggedinProvider
     ) {
-        super( theApp, theAlertCtrl, theLoadingCtrl, theModalCtrl, theNavCtrl, theToastCtrl, theUserData);
+        super(theApp, theAlertCtrl, theModalCtrl, theToastCtrl, theLoadingCtrl, theNavCtrl, theLoggedinProvider);
 
         console.log("LogoutPage constructor");
     }
@@ -73,29 +73,16 @@ export class LogoutPage extends LoggedinPage {
     }
 
 
-
-
-    ionViewDidEnter() {
-        console.log("LogoutPage ionViewDidEnter");
+    /* **********************************************************************
+    LogoutPage can ALWAYS leave without further check or user confirmation.
+    */
+    ionViewCanLeave_ALWAYS(): boolean {
+        return true;
     }
+    // LogoutPage does not need to check for "dirty" contents or forms. See comment above for method ionViewCanLeave_ALWAYS.
+    ionViewCanLeave_SOMETIMES(): Promise<boolean> { return Promise.resolve( true);}
+    // LogoutPage does not need to retrieve a message to confirm leaving the page. See comment above for method ionViewCanLeave_ALWAYS.
+    ionViewCanLeave_PromptExtraMessage(): Promise<string> { return Promise.resolve( "");}
 
-
-    updateContent(): Promise<any> {
-        return new Promise<any>(()=>{});
-    }
-
-
-
-
-    openSocial(network: string, fab: FabContainer) {
-        let loading = this.loadingCtrl.create({
-            content: `Posting to ${network}`,
-            duration: (Math.random() * 1000) + 500
-        });
-        loading.onWillDismiss(() => {
-            fab.close();
-        });
-        loading.present();
-    }
 
 }

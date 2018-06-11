@@ -51,22 +51,32 @@ permissions and limitations under the Licence.
         <ion-row>
             <ion-col col-6>
                 <div text-center>
-                    <button ion-button round color="danger" (click)="deactivateAllIdentities()">None</button>
+                    <button ion-button round color="danger" (click)="deactivateAll()">None</button>
                 </div>
             </ion-col>
             <ion-col col-6>
                 <div text-center>
-                    <button ion-button round color="secondary" (click)="activateAllIdentities()">All</button>
+                    <button ion-button round color="secondary" (click)="activateAll()">All</button>
                 </div>
             </ion-col>
         </ion-row>
-        <ion-item *ngFor="let identityActivation of identityActivations" [attr.compositeKey]="(identityActivation.applicationKey + '_-_' + identityActivation.identityKey) | lowercase">
-            <span item-start class="dot"></span>
-            <ion-label>{{identityActivation.applicationKey}} {{identityActivation.identityKey}}</ion-label>
-            <ion-toggle [(ngModel)]="identityActivation.isActive"
-                        (click)="identityActiveChanged(identityActivation.applicationKey, identityActivation.identityKey)"
-                        color="secondary"></ion-toggle>
-        </ion-item>
+        
+        <ion-item-group *ngFor="let applicationActivation of applicationActivations" >
+            
+            <ion-item-divider sticky>
+                <ion-label>{{applicationActivation.applicationKey}}</ion-label>
+                <ion-toggle [(ngModel)]="applicationActivation.isActive"
+                            color="secondary"></ion-toggle>
+            </ion-item-divider>
+    
+            <ion-item *ngFor="let identityActivation of applicationActivation.identityActivations">
+                <span item-start class="dot"></span>
+                <ion-label>{{identityActivation.applicationKey}} {{identityActivation.identityKey}}</ion-label>
+                <ion-toggle [(ngModel)]="identityActivation.isActive"
+                            color="secondary"></ion-toggle>
+            </ion-item>
+            
+        </ion-item-group>
     
     </ion-list>
 

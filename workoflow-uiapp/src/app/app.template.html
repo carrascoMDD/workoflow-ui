@@ -33,8 +33,11 @@ permissions and limitations under the Licence.
 
 <!-- OJO ACV <ion-split-pane> removed to have the menu show and hide  -->
 
-<!-- logged out menu -->
-<ion-menu id="loggedOutMenu" [content]="content">
+<!-- **********************************************************************
+logged out menu
+Also presents the items for the logged in menu, but shall appear disabled.
+-->
+<ion-menu id="domid_menu_loggedOut" [content]="content">
     
     <ion-header>
         <ion-toolbar>
@@ -53,7 +56,7 @@ permissions and limitations under the Licence.
         
         <ion-list>
             <ion-list-header>
-                Work (flow) - please login
+                workOflow&ensp;-&ensp;please login
             </ion-list-header>
             <button disabled ion-item menuClose *ngFor="let p of flowPages" (click)="openPage(p)">
                 <ion-icon item-start [name]="p.icon" [color]="isActive(p)"></ion-icon>
@@ -70,16 +73,21 @@ permissions and limitations under the Licence.
                 {{p.title}}
             </button>
         </ion-list>
-        
+    
         <ion-list>
             <ion-list-header>
-                Tutorial
+                Info
             </ion-list-header>
+            <button ion-item menuClose *ngFor="let p of alwaysPages" (click)="openPage(p)">
+                <ion-icon item-start [name]="p.icon" [color]="isActive(p)"></ion-icon>
+                {{p.title}}
+            </button>
             <button ion-item menuClose (click)="openTutorial()">
                 <ion-icon item-start name="hammer"></ion-icon>
                 Show Tutorial
             </button>
         </ion-list>
+       
     </ion-content>
 
 </ion-menu>
@@ -87,7 +95,7 @@ permissions and limitations under the Licence.
 
 
 <!-- logged in menu -->
-<ion-menu id="loggedInMenu" [content]="content">
+<ion-menu id="domid_menu_loggedIn" [content]="content">
     
     <ion-header>
         <ion-toolbar>
@@ -106,7 +114,7 @@ permissions and limitations under the Licence.
         
         <ion-list>
             <ion-list-header>
-                Work (flow)
+                workOflow
             </ion-list-header>
             <button ion-item menuClose *ngFor="let p of flowPages" (click)="openPage(p)">
                 <ion-icon item-start [name]="p.icon" [color]="isActive(p)"></ion-icon>
@@ -124,17 +132,22 @@ permissions and limitations under the Licence.
                 {{p.title}}
             </button>
         </ion-list>
-        
+    
+    
         <ion-list>
             <ion-list-header>
-                Tutorial
+                Info
             </ion-list-header>
+            <button ion-item menuClose *ngFor="let p of alwaysPages" (click)="openPage(p)">
+                <ion-icon item-start [name]="p.icon" [color]="isActive(p)"></ion-icon>
+                {{p.title}}
+            </button>
             <button ion-item menuClose (click)="openTutorial()">
                 <ion-icon item-start name="hammer"></ion-icon>
                 Show Tutorial
             </button>
         </ion-list>
-    
+
     </ion-content>
 
 </ion-menu>

@@ -30,7 +30,7 @@ permissions and limitations under the Licence.
  *
  */
 
-import {Component, ViewChild} from '@angular/core';
+import {Component, ViewChild}  from '@angular/core';
 import {
     AlertController,
     App,
@@ -39,22 +39,21 @@ import {
     NavController,
     ToastController,
     LoadingController
-} from 'ionic-angular';
+}                              from 'ionic-angular';
+import { ActivationsProvider } from "../../../providers/activations-provider";
 
-import {UserData} from '../../../providers/user-data';
+import { FlowlistPage }       from "../flowlist/flowlist";
+import { TemplateDetailPage } from '../template-detail/template-detail';
+import { LoggedinProvider }   from "../../../providers/loggedin-provider";
+import { Templatespec }       from '../../../interfaces/flow-templatespecs';
+import { TemplatesFilter }    from "../../../filters/templates-filter";
 
-import {FlowboxPage} from "../flowbox/flowbox";
-
-import {TemplateDetailPage} from '../template-detail/template-detail';
-
-import {Templatespec} from '../../../interfaces/flow-templatespecs';
-import {TemplatesFilter} from "../../../filters/templates-filter";
 
 @Component({
     selector: 'page-templates',
     templateUrl: 'templates.html'
 })
-export class TemplatesPage extends FlowboxPage {
+export class TemplatesPage extends FlowlistPage {
     // Get the inboxList List and not a reference to the controller element
     @ViewChild('contentsListView', {read: List}) contentsList: List;
 
@@ -65,14 +64,15 @@ export class TemplatesPage extends FlowboxPage {
     constructor(
         theApp: App,
         theAlertCtrl: AlertController,
-        theLoadingCtrl: LoadingController,
         theModalCtrl: ModalController,
-        theNavCtrl: NavController,
         theToastCtrl: ToastController,
-        theUserData: UserData,
+        theLoadingCtrl: LoadingController,
+        theNavCtrl: NavController,
+        theLoggedinProvider: LoggedinProvider,
+        theActivationsProvider: ActivationsProvider,
         public templatesFilter: TemplatesFilter
     ) {
-        super( theApp, theAlertCtrl, theLoadingCtrl, theModalCtrl, theNavCtrl, theToastCtrl, theUserData);
+        super(theApp, theAlertCtrl, theModalCtrl, theToastCtrl, theLoadingCtrl, theNavCtrl, theLoggedinProvider, theActivationsProvider);
 
         this.flowboxTitle = "Templates";
         this.flowboxIcon  = "create";

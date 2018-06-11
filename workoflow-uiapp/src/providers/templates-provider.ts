@@ -32,13 +32,11 @@ permissions and limitations under the Licence.
 
 import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
-import {UserData} from './user-data';
-
 import {HttpClient} from '@angular/common/http';
-
 
 import 'rxjs/add/operator/map';
 import 'rxjs/add/observable/of';
+
 import {Templatespec, Variablespec} from "../interfaces/flow-templatespecs";
 
 // const URL_SCHEMEHOSTPORT_realhost = "http://localhost:8080";
@@ -50,7 +48,6 @@ const URL_PROCESSDEFINITIONS_samehost = "assets/flow/flow-templates-static.json"
 
 const URL_SCHEMEHOSTPORT = URL_SCHEMEHOSTPORT_samehost;
 const URL_PROCESSDEFINITIONS = URL_PROCESSDEFINITIONS_samehost;
-
 
 /*
 const URL_PROCESSINSTANCES   	= "/process-api/runtime/process-instances";
@@ -66,7 +63,7 @@ export class TemplatesProvider {
 
     templatespecs: Templatespec[];
 
-    constructor( public httpc: HttpClient, public user: UserData) {
+    constructor( public httpc: HttpClient) {
         console.log("TemplatesProvider constructor");
     }
 

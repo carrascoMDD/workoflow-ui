@@ -40218,6 +40218,40 @@ permissions and limitations under the Licence.
  */
 }
 
+common {
+  /*
+* common.scss
+*
+* Created @author Antonio Carrasco Valero 201806032137
+*
+*
+***************************************************************************
+
+Copyright 2018 Antonio Carrasco Valero
+workOflow Single-page-application and hybrid Android/iOS app playground with Ionic3 Angular6 on  Flowable REST API as Spring Boot Java application.
+
+Licensed under the EUPL, Version 1.1 only (the "Licence");
+You may not use this work except in compliance with the
+Licence.
+You may obtain a copy of the Licence at:
+https://joinup.ec.europa.eu/software/page/eupl/licence-eupl
+Unless required by applicable law or agreed to in
+writing, software distributed under the Licence is
+distributed on an "AS IS" basis,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+express or implied.
+See the Licence for the specific language governing
+permissions and limitations under the Licence.
+{{License2}}
+
+{{Licensed1}}
+{{Licensed2}}
+
+***************************************************************************
+*
+*/
+}
+
 /*
  * drafts.scss
  *
@@ -40401,6 +40435,40 @@ permissions and limitations under the Licence.
 
 flow-header .valignmiddle {
   vertical-align: middle;
+}
+
+page-flowbox {
+  /*
+* flowbox.scss
+*
+* Created @author Antonio Carrasco Valero 201805252222
+*
+*
+***************************************************************************
+
+Copyright 2018 Antonio Carrasco Valero
+workOflow Single-page-application and hybrid Android/iOS app playground with Ionic3 Angular6 on  Flowable REST API as Spring Boot Java application.
+
+Licensed under the EUPL, Version 1.1 only (the "Licence");
+You may not use this work except in compliance with the
+Licence.
+You may obtain a copy of the Licence at:
+https://joinup.ec.europa.eu/software/page/eupl/licence-eupl
+Unless required by applicable law or agreed to in
+writing, software distributed under the Licence is
+distributed on an "AS IS" basis,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+express or implied.
+See the Licence for the specific language governing
+permissions and limitations under the Licence.
+{{License2}}
+
+{{Licensed1}}
+{{Licensed2}}
+
+***************************************************************************
+*
+*/
 }
 
 page-flowbox {
@@ -40762,6 +40830,48 @@ permissions and limitations under the Licence.
  */
 }
 
+/*
+ * support.scss
+ *
+ * Created @author Antonio Carrasco Valero 201805252222
+ *
+ *
+ ***************************************************************************
+
+ Copyright 2018 Antonio Carrasco Valero
+ workOflow Single-page-application and hybrid Android/iOS app playground with Ionic3 Angular6 on  Flowable REST API as Spring Boot Java application.
+
+Licensed under the EUPL, Version 1.1 only (the "Licence");
+You may not use this work except in compliance with the
+Licence.
+You may obtain a copy of the Licence at:
+https://joinup.ec.europa.eu/software/page/eupl/licence-eupl
+Unless required by applicable law or agreed to in
+writing, software distributed under the Licence is
+distributed on an "AS IS" basis,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+express or implied.
+See the Licence for the specific language governing
+permissions and limitations under the Licence.
+ {{License2}}
+
+ {{Licensed1}}
+ {{Licensed2}}
+
+ ***************************************************************************
+ *
+ */
+page-support .logo {
+  padding: 10px 10px 10px 10px;
+  min-width: 100px;
+  text-align: center;
+}
+
+page-support .logo img {
+  min-width: 50px;
+  max-width: 80%;
+}
+
 page-templates {
   /*
 * templates.scss
@@ -40858,19 +40968,53 @@ permissions and limitations under the Licence.
  ***************************************************************************
  *
  */
-page-user .logo {
+page-login .logo {
   padding: 10px 10px 10px 10px;
   min-width: 100px;
   text-align: center;
 }
 
-page-user .logo img {
+page-login .logo img {
   min-width: 50px;
   max-width: 80%;
 }
 
-page-user .list {
+page-login .list {
   margin-bottom: 0;
+}
+
+login-selector {
+  /*
+ * login-selector.scss
+ *
+ * Created @author Antonio Carrasco Valero 201806021847
+ *
+ *
+ ***************************************************************************
+
+ Copyright 2018 Antonio Carrasco Valero
+ workOflow Single-page-application and hybrid Android/iOS app playground with Ionic3 Angular6 on  Flowable REST API as Spring Boot Java application.
+
+Licensed under the EUPL, Version 1.1 only (the "Licence");
+You may not use this work except in compliance with the
+Licence.
+You may obtain a copy of the Licence at:
+https://joinup.ec.europa.eu/software/page/eupl/licence-eupl
+Unless required by applicable law or agreed to in
+writing, software distributed under the Licence is
+distributed on an "AS IS" basis,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+express or implied.
+See the Licence for the specific language governing
+permissions and limitations under the Licence.
+ {{License2}}
+
+ {{Licensed1}}
+ {{Licensed2}}
+
+ ***************************************************************************
+ *
+ */
 }
 
 /*
@@ -40911,48 +41055,6 @@ page-signup .logo {
 }
 
 page-signup .logo img {
-  min-width: 50px;
-  max-width: 80%;
-}
-
-/*
- * support.scss
- *
- * Created @author Antonio Carrasco Valero 201805252222
- *
- *
- ***************************************************************************
-
- Copyright 2018 Antonio Carrasco Valero
- workOflow Single-page-application and hybrid Android/iOS app playground with Ionic3 Angular6 on  Flowable REST API as Spring Boot Java application.
-
-Licensed under the EUPL, Version 1.1 only (the "Licence");
-You may not use this work except in compliance with the
-Licence.
-You may obtain a copy of the Licence at:
-https://joinup.ec.europa.eu/software/page/eupl/licence-eupl
-Unless required by applicable law or agreed to in
-writing, software distributed under the Licence is
-distributed on an "AS IS" basis,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
-express or implied.
-See the Licence for the specific language governing
-permissions and limitations under the Licence.
- {{License2}}
-
- {{Licensed1}}
- {{Licensed2}}
-
- ***************************************************************************
- *
- */
-page-support .logo {
-  padding: 10px 10px 10px 10px;
-  min-width: 100px;
-  text-align: center;
-}
-
-page-support .logo img {
   min-width: 50px;
   max-width: 80%;
 }

@@ -30,22 +30,34 @@ permissions and limitations under the Licence.
  *
  */
 
-import { Component } from '@angular/core';
+import { Component }         from '@angular/core';
 import { PopoverController } from 'ionic-angular';
 
-import { PopoverPage } from '../about-popover/about-popover';
+import { PopoverPage }       from '../about-popover/about-popover';
 
-@Component({
-  selector: 'page-about',
-  templateUrl: 'about.html'
+
+
+@Component(
+{
+    selector:    'page-about',
+    templateUrl: 'about.html'
 })
 export class AboutPage {
-  conferenceDate = '2047-05-17';
 
-  constructor(public popoverCtrl: PopoverController) { }
+    conferenceDate = '2018-09-21';
 
-  presentPopover(event: Event) {
-    let popover = this.popoverCtrl.create(PopoverPage);
-    popover.present({ ev: event });
-  }
+
+
+    constructor( public popoverCtrl: PopoverController ) {
+        console.log( "AboutPage constructor");
+    }
+
+
+
+    presentPopover( event: Event ) {
+        let popover = this.popoverCtrl.create( PopoverPage );
+        popover.present( { ev: event } );
+    }
+
+
 }

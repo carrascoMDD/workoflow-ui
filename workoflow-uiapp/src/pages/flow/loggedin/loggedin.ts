@@ -42,43 +42,47 @@ import {
     FabContainer
 } from 'ionic-angular';
 
-import {UserData} from '../../../providers/user-data';
-
+import {LoggedinProvider} from '../../../providers/loggedin-provider';
 
 import {ILogin} from '../../../interfaces/flow-ilogins';
 
-import {LoginPage} from '../../login/login';
+import {LoginPage}    from '../../login/login';
+import { CommonPage } from "../common/common";
 
-
+/* **********************************************************************
+Abstract class intended to be reused by specialisation by pages which require the user to be logged in.
+*/
 @Component({
     selector: 'page-loggedin',
     templateUrl: 'loggedin.html'
 })
-export abstract class LoggedinPage {
+export abstract class LoggedinPage extends CommonPage {
+
+    static OPENSOCIAL_MILLIS_RANDOM = 0; // 1000;
+    static OPENSOCIAL_MILLIS_MIN    = 1000; // 500;
 
     authenticatedLogin: ILogin;
 
     constructor(
-        public app: App,
-        public alertCtrl: AlertController,
-        public loadingCtrl: LoadingController,
-        public modalCtrl: ModalController,
+        theApp: App,
+        theAlertCtrl: AlertController,
+        theModalCtrl: ModalController,
+        theToastCtrl: ToastController,
+        theLoadingCtrl: LoadingController,
         public navCtrl: NavController,
-        public toastCtrl: ToastController,
-        public userData: UserData
+        public loggedinProvider: LoggedinProvider
     ) {
+        super( theApp, theAlertCtrl, theModalCtrl, theToastCtrl, theLoadingCtrl);
+
         console.log("(abstract)LoggedinPage constructor");
     }
 
 
-
-    ionViewDidLoad() {
-        console.log("(abstract)LoggedinPage ionViewDidLoad");
-        this.app.setTitle( "(abstract)LoggedinPage");
-    }
-
-
-
+    /* **********************************************************************
+    Ensure that the user is logged in before proceeding visiting this page.
+    If the user is not logged in
+    then present the LoginPage, and not this page
+    */
     ionViewCanEnter() : Promise<any> {
         return this.beLoggedinOrGoToLoginPage();
     }
@@ -86,17 +90,33 @@ export abstract class LoggedinPage {
 
 
 
+    /* **********************************************************************
+    Returns a promise which shall resolve to the ILogin of the logged in user if any,
+    or be rejected if the user is not loged in.
 
+    If the user is not logged in
+    then
+        an alert is presented to the user indicating that the user is not logged in
+        navigation is directed to the Login Page
 
+    Obtains AuthenticatedLogin (an ILogin) from LoggedinProvider
+    If authenticated
+        then proceed resolving with the ILogin instance of the authenticated user
+
+    else ( the user is not authenticated)
+        presentAlert
+        set the root nav root to LoginPage
+        reject the returned promise
+    */
     beLoggedinOrGoToLoginPage() : Promise<ILogin> {
         console.log("(abstract)LoggedinPage beLoggedinOrGoToLoginPage");
         return new Promise<ILogin>( ( pheResolve, pheReject) => {
-            this.userData.getAuthenticatedLogin()
+            this.loggedinProvider.getAuthenticatedLogin()
                 .then(
                     ( theAuthenticatedLogin) => {
                         if ( theAuthenticatedLogin) {
                             this.authenticatedLogin = theAuthenticatedLogin;
-                            console.log("(abstract)LoggedinPage LOGGED IN beLoggedinOrGoToLoginPage this.userData.getAuthenticatedLogin()");
+                            console.log("(abstract)LoggedinPage LOGGED IN beLoggedinOrGoToLoginPage this.loggedinProvider.getAuthenticatedLogin()");
                             pheResolve( theAuthenticatedLogin);
                             return;
                         }
@@ -132,24 +152,9 @@ export abstract class LoggedinPage {
                                             }, 0);
 
                                         }
-                                        else {
-                                            console.log("(abstract)LoggedinPage beLoggedinOrGoToLoginPage EMPTY this.navCtrl.length()" + " about to setRoot( LoginPage)");
-                                            this.app.getRootNav().setRoot( LoginPage)
-                                                .then(
-                                                    () => {
-                                                        console.log("(abstract)LoggedinPage beLoggedinOrGoToLoginPage done this.app.getRootNav().setRoot( LoginPage)");
-                                                        pheReject( false);
-                                                    },
-                                                    ( theError) => {
-                                                        const aMsg = "(abstract)LoggedinPage beLoggedinOrGoToLoginPage ERROR in setRoot() theError=" + theError;
-                                                        console.log( aMsg);
-                                                        pheReject( "User not logged in\n" + aMsg);
-                                                    }
-                                                );
-                                        }
                                     },
                                     ( theError) => {
-                                        const aMsg = "(abstract)LoggedinPage beLoggedinOrGoToLoginPage NO this.userData.getAuthenticatedLogin() theError=" + theError;
+                                        const aMsg = "(abstract)LoggedinPage beLoggedinOrGoToLoginPage NO this.loggedinProvider.getAuthenticatedLogin() theError=" + theError;
                                         console.log( aMsg);
                                         pheReject( "User not logged in\n" + aMsg);
                                     }
@@ -157,7 +162,7 @@ export abstract class LoggedinPage {
                         }
                     },
                     (theError) => {
-                        const aMsg = "((abstract)LoggedinPage beLoggedinOrGoToLoginPage this.userData.getAuthenticatedLogin() error=" + theError;
+                        const aMsg = "((abstract)LoggedinPage beLoggedinOrGoToLoginPage this.loggedinProvider.getAuthenticatedLogin() error=" + theError;
                         console.log( aMsg);
                         pheReject( "User not logged in\n" + aMsg);
                     }
@@ -168,48 +173,11 @@ export abstract class LoggedinPage {
 
 
 
-    presentAlert() {
-        let alert = this.alertCtrl.create({
-            title: "You are not logged in, or your session expired",
-            subTitle: "Please login",
-            buttons: ["Go to Login"]
-        });
-        return alert.present();
-    }
-
-
-
-
-
-    toast_Updated( theMessage: string, theMillisToToast: number = 3000): Promise<any> {
-        return new Promise<any>( ( pheResolveTop, pheRejectTop) => {
-            if(pheRejectTop){}/*CQT*/
-
-            this.toastCtrl
-                .create({
-                    message: ( theMessage ? theMessage : "Updated"),
-                    duration: ( theMillisToToast <= 30000 ? theMillisToToast: 30000)
-                })
-                .present()
-                .then(
-                    () => {
-                        pheResolveTop();
-                    },
-                    () => {
-                        pheResolveTop();
-                    }
-                );
-        });
-    }
-
-
-
 
 
     logout() : Promise<any> {
         return new Promise<any>( ( pheResolve, pheReject) => {
-            if(pheReject){}/*CQT*/
-            this.userData.logout()
+            this.loggedinProvider.logout()
                 .then(
                     ( ) => {
                         return this.app.getRootNav().setRoot( LoginPage);
@@ -231,15 +199,42 @@ export abstract class LoggedinPage {
     }
 
 
-    openSocial(network: string, fab: FabContainer) {
-        let loading = this.loadingCtrl.create({
-            content: `Posting to ${network}`,
-            duration: (Math.random() * 1000) + 500
+
+
+
+    presentAlert() {
+        let alert = this.alertCtrl.create({
+            title: "You are not logged in, or your session expired",
+            subTitle: "Please login",
+            buttons: ["Go to Login"]
         });
-        loading.onWillDismiss(() => {
-            fab.close();
+        return alert.present();
+    }
+
+
+
+
+
+
+    /* **********************************************************************
+    Posting to social networks is only allowed to logged in users.
+
+    Note that this behavior implemented in this abstract superclass is available to subclasses
+    and subclasses are guaranteed to operate only for logged in users
+        as per ionic/angular invocation of ionViewCanEnter() delegating on beLoggedinOrGoToLoginPage above.
+    */
+    openSocial( theNetwork: string, theFab: FabContainer): Promise<any> {
+
+        const aLoading = this.loadingCtrl.create({
+            content: `Posting to ${theNetwork}`,
+            duration: LoggedinPage.OPENSOCIAL_MILLIS_MIN + Math.random() * LoggedinPage.OPENSOCIAL_MILLIS_RANDOM
         });
-        loading.present();
+
+        aLoading.onWillDismiss(() => {
+            theFab.close();
+        });
+
+        return aLoading.present();
     }
 
 

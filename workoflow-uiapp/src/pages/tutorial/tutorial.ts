@@ -34,74 +34,106 @@ import { Component, ViewChild } from '@angular/core';
 
 import { MenuController, NavController, Slides } from 'ionic-angular';
 
-import { Storage } from '@ionic/storage';
+import { StorageProvider }  from '../../storage/storage-provider';
+import { LoggedinProvider } from '../../providers/loggedin-provider';
+import { LoginPage }        from '../login/login';
+import { FlowTabsPage }     from '../flow/flowtabs-page/flowtabs-page';
 
-import {UserData} from '../../providers/user-data';
-import { LoginPage } from '../login/login';
-import { FlowTabsPage } from '../flow/flowtabs-page/flowtabs-page';
 
-@Component({
-  selector: 'page-tutorial',
-  templateUrl: 'tutorial.html'
-})
 
+@Component( {
+    selector:    'page-tutorial',
+    templateUrl: 'tutorial.html'
+} )
 export class TutorialPage {
-  showSkip = true;
 
-	@ViewChild('slides') slides: Slides;
-
-  constructor(
-    public navCtrl: NavController,
-    public menu: MenuController,
-    public storage: Storage,
-    public userData: UserData
-  ) { }
-
-  startApp() {
-      this.storage.set('hasSeenTutorial', 'true')
-          .then(
-              () => {
-                  this.userData.hasLoggedIn()
-                      .then(
-                          (theHasLoggedIn) => {
-                              if( theHasLoggedIn) {
-                                  console.log( "TutorialPage startApp this.userData.hasLoggedIn() true");
-                                  this.navCtrl.setRoot( FlowTabsPage);
-                              }
-                              else {
-                                  console.log( "TutorialPage startApp this.userData.hasLoggedIn() false");
-                                  this.navCtrl.setRoot( LoginPage);
-                              }
-                          },
-                          ( theError) => {
-                            console.log( "TutorialPage startApp this.userData.hasLoggedIn() error=" + theError);
-                            throw theError;
-                          });
-              },
-              ( theError) => {
-                  console.log( "TutorialPage startApp this.storage.set('hasSeenTutorial', 'true') error=" + theError);
-                  throw theError;
-              }
-          );
-  }
+    // sub-views to be managed by a Slides controller
+    @ViewChild( 'slides' ) slides: Slides;
 
 
-  onSlideChangeStart(slider: Slides) {
-    this.showSkip = !slider.isEnd();
-  }
+    // Assist the template to determine whether at the end of the slides or not
+    showSkip = true;
 
-  ionViewWillEnter() {
-    this.slides.update();
-  }
 
-  ionViewDidEnter() {
-    // the root left menu should be disabled on the tutorial page
-    // this.menu.enable(false);
-  }
 
-  ionViewDidLeave() {
-    // enable the root left menu when leaving the tutorial page
-    // this.menu.enable(true);
-  }
+    constructor(
+        public navCtrl: NavController,
+        public menu: MenuController,
+        public storageProvider: StorageProvider,
+        public loggedinProvider: LoggedinProvider
+    ) {
+        console.log( "TutorialPage constructor");
+    }
+
+
+
+    /* **********************************************************************
+    Inform the slider that the child slides have changed (as when opening this page)
+    */
+    ionViewWillEnter() {
+        this.slides.update();
+    }
+
+
+
+
+    /* **********************************************************************
+    Persist in some storage local to the user's browser and device
+        the fact that the user has already visited the tutorial.
+
+    If the user is logged in
+        then visit the first of the flowTabs pages
+        else visit the login page
+    */
+    tutorialCompleted(): Promise<any> {
+        return new Promise( ( pheResolve, pheReject ) => {
+
+            this.storageProvider.persist_HAS_SEEN_TUTORIAL( true)
+                .then(
+                    () => {
+                        return this.loggedinProvider.hasLoggedIn();
+                    },
+                    ( theError ) => {
+                        console.log( "TutorialPage tutorialCompleted this.persist_HAS_SEEN_TUTORIAL error=" + theError );
+                        throw theError;
+                    }
+                )
+                .then(
+                    ( theHasLoggedIn ) => {
+                        if( theHasLoggedIn ) {
+                            console.log( "TutorialPage tutorialCompleted this.loggedinProvider.hasLoggedIn() true setting FlowTabsPage as root" );
+                            return this.navCtrl.setRoot( FlowTabsPage, { tabIndex: 0});
+                        }
+                        else {
+                            console.log( "TutorialPage tutorialCompleted this.loggedinProvider.hasLoggedIn() false setting LoginPage as root" );
+                            return this.navCtrl.setRoot( LoginPage );
+                        }
+                    },
+                    ( theError ) => {
+                        throw theError;
+                    }
+
+                )
+                .then(
+                    () => {
+                        pheResolve();
+                    },
+                    ( theError ) => {
+                        pheReject( theError);
+                    }
+                );
+        });
+    }
+
+
+
+    /* **********************************************************************
+    Assist the template to determine whether at the end of the slides or not
+    */
+    onSlideChangeStart( slider: Slides ) {
+        this.showSkip = !slider.isEnd();
+    }
+
+
 
 }

@@ -52,7 +52,7 @@ permissions and limitations under the Licence.
             <ion-item>
                 <ion-icon name="person" item-start></ion-icon>
                 <ion-label>Courtesy demo logins</ion-label>
-                <ion-select name="login_select" [(ngModel)]="selectedLogin" (ionChange)="courtesyLoginSelected()">
+                <ion-select name="login_select" [(ngModel)]="selectedLogin" (ionChange)="loginSelected()">
                     <ion-option *ngFor="let aLogin of logins" [value]="aLogin" >{{ aLogin.login}}</ion-option>
                 </ion-select>
             </ion-item>
@@ -63,7 +63,7 @@ permissions and limitations under the Licence.
 					required>
 				</ion-input>
 			</ion-item>
-			<p ion-text [hidden]="username.valid || submitted == false" color="danger" padding-left>
+			<p ion-text [hidden]="username && username.valid" color="danger" padding-left>
 				Username is required
 			</p>
 
@@ -72,7 +72,7 @@ permissions and limitations under the Licence.
 				<ion-input [(ngModel)]="login.password" name="password" type="password" #password="ngModel" required>
 				</ion-input>
 			</ion-item>
-			<p ion-text [hidden]="password.valid || submitted == false" color="danger" padding-left>
+			<p ion-text [hidden]="password && password.valid" color="danger" padding-left>
 				Password is required
 			</p>
 		</ion-list>

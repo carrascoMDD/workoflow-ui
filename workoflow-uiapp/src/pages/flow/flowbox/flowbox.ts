@@ -37,13 +37,12 @@ import {
     ModalController,
     NavController,
     ToastController,
-    LoadingController, Refresher
+    LoadingController
 } from 'ionic-angular';
 
-import {UserData} from '../../../providers/user-data';
+import {LoggedinProvider} from '../../../providers/loggedin-provider';
 
 import {LoggedinPage} from "../loggedin/loggedin";
-import {IdentitiesFilterPage} from "../identities-filter/identitites-filter";
 import {FlowHeader} from "../flow-header/flow-header";
 
 
@@ -51,35 +50,28 @@ import {FlowHeader} from "../flow-header/flow-header";
     selector: 'page-flowbox',
     templateUrl: 'flowbox.html'
 })
-export class FlowboxPage extends LoggedinPage {
+export abstract class FlowboxPage extends LoggedinPage {
 
     @ViewChild( FlowHeader) flowheader: FlowHeader;
 
 
     flowboxTitle:   string;
     flowboxIcon:    string;
-    segment:        string;
-    queryText:      string;
-
-    hasAnyFavoriteItem = false;
-    hasAnyUrgentItem   = false;
 
 
     constructor(
         theApp: App,
         theAlertCtrl: AlertController,
-        theLoadingCtrl: LoadingController,
         theModalCtrl: ModalController,
-        theNavCtrl: NavController,
         theToastCtrl: ToastController,
-        theUserData: UserData
+        theLoadingCtrl: LoadingController,
+        theNavCtrl: NavController,
+        theLoggedinProvider: LoggedinProvider
     ) {
-        super(theApp, theAlertCtrl, theLoadingCtrl, theModalCtrl, theNavCtrl, theToastCtrl, theUserData);
+        super(theApp, theAlertCtrl, theModalCtrl, theToastCtrl, theLoadingCtrl, theNavCtrl, theLoggedinProvider);
 
         this.flowboxTitle = "(abstract)Flowbox";
         this.flowboxIcon  = "grid";
-        this.segment = "all";
-        this.queryText = "";
 
         console.log( this.flowboxTitle + " constructor");
     }
@@ -93,80 +85,6 @@ export class FlowboxPage extends LoggedinPage {
     }
 
 
-
-
-    ionViewDidEnter() {
-        console.log("(abstract)LoggedinPage ionViewDidEnter");
-        this.beLoggedinOrGoToLoginPage()
-            .then(
-                ( pheIsLoggedIn) => {
-                    if( pheIsLoggedIn) {
-                        return this.updateContent();
-                    }
-                },
-                ( pheError) => {
-                    throw pheError;
-                }
-            )
-    }
-
-
-
-
-    presentFilter():void {
-        let modal = this.modalCtrl.create( IdentitiesFilterPage);
-        modal.present();
-
-        modal.onWillDismiss((data: any[]) => {
-            if (data) {
-                this.updateContent();
-            }
-        });
-    }
-
-
-
-    doRefresh(refresher: Refresher) {
-        return new Promise<any>( ( resolveTop, rejectTop) => {
-            this.beLoggedinOrGoToLoginPage()
-                .then(
-                    ( pheIsLoggedIn) => {
-                        if(pheIsLoggedIn){}/*CQT*/
-                        return this.updateContent();
-                    },
-                    ( pheError) => {
-                        throw pheError;
-                    }
-                )
-                .then(
-                    ( pheResult) => {
-                        refresher.complete();
-
-                        /* ************************************************
-                        FireAndForget: Let this one run on its own,
-                        hopefully suffling pages while still open shall not break or break it !
-                         */
-                        this.toast_Updated( "Updated", 3000)/*CQT*/.then(()=>{});
-
-                        resolveTop( pheResult);
-                    },
-                    ( pheError) => {
-                        rejectTop( pheError);
-                    }
-                );
-        });
-    }
-
-
-
-
-
-    //abstract
-    updateContent(): Promise<any> {
-        return new Promise<any>((resolve) => {
-            resolve();
-        });
-    }
 
 
 }

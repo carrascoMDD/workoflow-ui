@@ -30,14 +30,20 @@ permissions and limitations under the Licence.
  *
  */
 
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
+import {
+    AlertController,
+    App,
+    LoadingController,
+    ModalController,
+    NavController,
+    ToastController
+}                    from 'ionic-angular';
 
-import {AlertController, App, LoadingController, ModalController, NavController, ToastController} from 'ionic-angular';
 
-import {UserData} from '../../../providers/user-data';
-import {TemplatesFilter} from "../../../filters/templates-filter";
-import {LoggedinPage} from "../loggedin/loggedin";
-import {ILogin} from "../../../interfaces/flow-ilogins";
+import { LoggedinPage }     from "../loggedin/loggedin";
+import { LoggedinProvider } from "../../../providers/loggedin-provider";
+import { ILogin }           from "../../../interfaces/flow-ilogins";
 
 
 @Component({
@@ -49,21 +55,33 @@ export class AccountPage extends LoggedinPage {
     constructor(
         theApp: App,
         theAlertCtrl: AlertController,
-        theLoadingCtrl: LoadingController,
         theModalCtrl: ModalController,
-        theNavCtrl: NavController,
         theToastCtrl: ToastController,
-        theUserData: UserData,
-        public templatesFilter: TemplatesFilter
+        theLoadingCtrl: LoadingController,
+        theNavCtrl: NavController,
+        theLoggedinProvider: LoggedinProvider
     ) {
-        super( theApp, theAlertCtrl, theLoadingCtrl, theModalCtrl, theNavCtrl, theToastCtrl, theUserData);
+        super( theApp, theAlertCtrl, theModalCtrl, theToastCtrl, theLoadingCtrl, theNavCtrl, theLoggedinProvider );
 
         console.log("TemplatesPage constructor");
     }
 
-    ngAfterViewInit() {
-        this.beLoggedinOrGoToLoginPage();
+
+    /* **********************************************************************
+    AccountPage can ALWAYS leave without further check or user confirmation.
+    The change user name operation is exposed through a modal dialog
+    and while editing it the user is prevented from leaving the page or any other user interaction
+    other than closing the dismissing the dialog or short of closing the whole browser or tab or app, or shutdown the session, computer or devide.
+    */
+    ionViewCanLeave_ALWAYS(): boolean {
+        return true;
     }
+    // AccountPage does not need to check for "dirty" contents or forms. See comment above for method ionViewCanLeave_ALWAYS.
+    ionViewCanLeave_SOMETIMES(): Promise<boolean> { return Promise.resolve( true);}
+    // AccountPage does not need to retrieve a message to confirm leaving the page. See comment above for method ionViewCanLeave_ALWAYS.
+    ionViewCanLeave_PromptExtraMessage(): Promise<string> { return Promise.resolve( "");}
+
+
 
     updatePicture() {
         console.log('Clicked to update picture');
@@ -78,7 +96,7 @@ export class AccountPage extends LoggedinPage {
     // Present an alert with the current username populated
     // clicking OK will update the username and display it
     // clicking Cancel will close the alert and do nothing
-    changeUsername() {
+    changeUsername(): Promise<any> {
         return new Promise<ILogin>( ( pheResolve, pheReject) => {
             this.beLoggedinOrGoToLoginPage()
                 .then(

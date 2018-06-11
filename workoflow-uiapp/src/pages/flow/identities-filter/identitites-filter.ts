@@ -30,7 +30,8 @@ permissions and limitations under the Licence.
  *
  */
 
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
+
 import {
     AlertController, App,
     LoadingController, ModalController,
@@ -39,139 +40,200 @@ import {
     ToastController,
     ViewController
 } from 'ionic-angular';
-import { UserData} from '../../../providers/user-data';
-import {IIdentityActivation} from "../../../interfaces/flow-iidentityactivation";
+
+import { IApplicationActivation } from "../../../interfaces/flow-iactivations";
+import { ActivationsProvider }    from "../../../providers/activations-provider";
+import { LoggedinProvider }       from "../../../providers/loggedin-provider";
+import { LoggedinPage }           from "../loggedin/loggedin";
 
 
 
-@Component({
-    selector: 'page-identities-filter',
-    templateUrl: 'identities-filter.html'
-})
-export class IdentitiesFilterPage {
+@Component(
+    {
+        selector:    'page-identities-filter',
+        templateUrl: 'identities-filter.html'
+    } )
+export class IdentitiesFilterPage extends LoggedinPage {
 
-    identityActivations: IIdentityActivation[];
-    identityActivationCompositeKeys: string[];
+
+    applicationActivations: IApplicationActivation[];
+
+    applicationActivations_original: IApplicationActivation[];
+
 
     constructor(
-        public app: App,
-        public alertCtrl: AlertController,
-        public loadingCtrl: LoadingController,
-        public modalCtrl: ModalController,
-        public navCtrl: NavController,
-        public toastCtrl: ToastController,
-        public userData: UserData,
+        theApp: App,
+        theAlertCtrl: AlertController,
+        theModalCtrl: ModalController,
+        theToastCtrl: ToastController,
+        theLoadingCtrl: LoadingController,
+        theNavCtrl: NavController,
+        theLoggedinProvider: LoggedinProvider,
         public navParams: NavParams,
-        public viewCtrl: ViewController) {
+        public viewCtrl: ViewController,
+        public activationsProvider: ActivationsProvider ) {
 
-        console.log("IdentitiesFilterPage constructor");
+        super( theApp, theAlertCtrl, theModalCtrl, theToastCtrl, theLoadingCtrl, theNavCtrl, theLoggedinProvider );
+
+        console.log( "IdentitiesFilterPage constructor" );
     }
 
 
-    ionViewDidLoad() {
-        console.log("IdentitiesFilterPage ionViewDidLoad");
+
+    /* **********************************************************************
+    IdentitiesFilterPage can ALWAYS leave without further check or user confirmation.
+    */
+    ionViewCanLeave_ALWAYS(): boolean {
+        return true;
     }
+    // IdentitiesFilterPage does not need to check for "dirty" contents or forms. See comment above for method ionViewCanLeave_ALWAYS.
+    ionViewCanLeave_SOMETIMES(): Promise<boolean> { return Promise.resolve( true);}
+    // IdentitiesFilterPage does not need to retrieve a message to confirm leaving the page. See comment above for method ionViewCanLeave_ALWAYS.
+    ionViewCanLeave_PromptExtraMessage(): Promise<string> { return Promise.resolve( "");}
+
+
+
+
 
     ionViewDidEnter() {
-        console.log("TemplatesPage ionViewDidEnter");
-        this.updateContent();
+        console.log( "TemplatesPage ionViewDidEnter" );
+        this.updateContent().then(() =>{});
     }
 
 
-    updateContent(): Promise<IIdentityActivation[]> {
-        return new Promise( ( pheResolve, pheReject) => {
-            this.userData.getIdentityActivations()
+
+    updateContent(): Promise<IApplicationActivation[]> {
+
+        return new Promise( ( pheResolve, pheReject ) => {
+
+            this.activationsProvider.getApplicationActivations()
                 .then(
-                    ( theIdentityActivations: IIdentityActivation[]) => {
-                        this.identityActivations = theIdentityActivations;
-                        this.identityActivationCompositeKeys =
-                            this.identityActivations.map(
-                                ( theIdentityActivation):string => {
-                                    return theIdentityActivation.applicationKey + "_-_" + theIdentityActivation.identityKey;
-                                }
-                            );
-                        pheResolve( theIdentityActivations);
+                    ( theApplicationActivations: IApplicationActivation[] ) => {
+
+                        this.applicationActivations_original = theApplicationActivations;
+                        this.applicationActivations = this.applicationActivations_original.map(
+                            ( theApplicationActivation) => {
+                                return theApplicationActivation.copyWithIdentityActivations();
+                            }
+                        );
+                        pheResolve( this.applicationActivations );
                     },
                     ( theError ) => {
-                        pheReject( theError);
+                        pheReject( theError );
                     }
                 );
-        });
+        } );
     }
 
 
 
 
 
-    identityActiveChanged( theApplicationKey: string, theIdentityKey: string): Promise<IIdentityActivation[]> {
-        console.log( "IdentitiesFilterPage identityActiveChanged applicationKey=" + theApplicationKey + " identityKey=" + theIdentityKey);
-        return new Promise<IIdentityActivation[]>( (resolve)=>{resolve();});
-        // return this.storeAndPropagageIdentityActivations();
+    deactivateAll(): Promise<IApplicationActivation[]> {
+        console.log( "IdentitiesFilterPage deactivateAllIdentities" );
+        return this.setActiveAllIdentities( false );
     }
 
 
 
-    deactivateAllIdentities(): Promise<IIdentityActivation[]> {
-        console.log( "IdentitiesFilterPage deactivateAllIdentities");
-        return this.setActiveAllIdentities( false);
+
+    activateAll(): Promise<IApplicationActivation[]> {
+        console.log( "IdentitiesFilterPage deactivateAllIdentities" );
+        return this.setActiveAllIdentities( true );
     }
 
 
 
-    activateAllIdentities(): Promise<IIdentityActivation[]> {
-        console.log( "IdentitiesFilterPage deactivateAllIdentities");
-        return this.setActiveAllIdentities( true);
-    }
 
-
-
-    setActiveAllIdentities( theActive: boolean): Promise<IIdentityActivation[]> {
-        if( !this.identityActivations) {
+    setActiveAllIdentities( theActive: boolean ): Promise<IApplicationActivation[]> {
+        if( !this.applicationActivations ) {
             return;
         }
 
-        for( let anActivityActivation of this.identityActivations) {
-            anActivityActivation.setActive( theActive);
+        for( let anApplicationActivation of this.applicationActivations ) {
+            anApplicationActivation.setActive( theActive );
+
+
+            for( let anIdentityActivation of anApplicationActivation.identityActivations ) {
+                anIdentityActivation.setActive( theActive );
+
+            }
         }
 
-        return this.storeAndPropagageIdentityActivations();
+        return this.commitActivations();
     }
 
 
 
 
 
+    /* **********************************************************************
+    The user has canceled the manipulation of application and identity activations.
+    Close the modal.
+    Do not submit any changes which may have been made to the isActive.
+    */
+    dismiss( data?: any ): Promise<any> {
+        return this.viewCtrl.dismiss( data );
+    }
 
-    applyFilters(): Promise<IIdentityActivation[]> {
-        return new Promise<IIdentityActivation[]>( ( pheResolve, pheReject) => {
-            this.storeAndPropagageIdentityActivations()
+
+
+
+    applyFilters(): Promise<IApplicationActivation[]> {
+
+        if( !this.hasAnyActivationChanged()) {
+            return Promise.resolve( this.applicationActivations);
+        }
+
+        return new Promise<IApplicationActivation[]>( ( pheResolve, pheReject ) => {
+            this.commitActivations()
                 .then(
-                    ( theIdentityActivations: IIdentityActivation[]) => {
-                        this.dismiss( this.identityActivations);
-                        pheResolve( theIdentityActivations);
+                    ( theApplicationActivations: IApplicationActivation[] ) => {
+                        if(theApplicationActivations)/*CQT*/{}
+
+                        return this.dismiss( this.applicationActivations );
+                    },
+                    ( theError ) => {
+                        throw theError;
+                    }
+                )
+                .then(
+                    () => {
+                        pheResolve( this.applicationActivations );
                     },
                     ( theError) => {
-                        pheReject( theError);
+                        pheReject( theError );
                     }
                 );
-        });
+        } );
     }
 
 
 
 
 
-    storeAndPropagageIdentityActivations(): Promise<IIdentityActivation[]> {
-        if( !this.identityActivations) {
+
+    hasAnyActivationChanged(): boolean {
+        if( !( this.applicationActivations
+            && this.applicationActivations_original)) {
+            return false;
+        }
+
+        return ActivationsProvider.equalApplicationActivations(
+            this.applicationActivations_original,
+            this.applicationActivations);
+    }
+
+
+
+    commitActivations(): Promise<IApplicationActivation[]> {
+        if( !this.applicationActivations ) {
             return;
         }
-        return this.userData.storeAndPropagageIdentityActivations();
+        return this.activationsProvider.commitActivations(
+            this.applicationActivations
+        );
     }
 
 
-    dismiss(data?: any) {
-        // using the injected ViewController this page
-        // can "dismiss" itself and pass back data
-        this.viewCtrl.dismiss(data);
-    }
 }

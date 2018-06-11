@@ -30,7 +30,7 @@ permissions and limitations under the Licence.
  *
  */
 
-import {Component, ViewChild} from '@angular/core';
+import {Component, ViewChild}  from '@angular/core';
 import {
     AlertController,
     App,
@@ -41,16 +41,17 @@ import {
     LoadingController
 } from 'ionic-angular';
 
-import {UserData} from '../../../providers/user-data';
-
-import {FlowboxPage} from "../flowbox/flowbox";
+import { ActivationsProvider } from "../../../providers/activations-provider";
+import { LoggedinProvider }    from "../../../providers/loggedin-provider";
+import { FlowlistPage }        from "../flowlist/flowlist";
 
 
 @Component({
     selector: 'page-inbox',
     templateUrl: 'inbox.html'
 })
-export class InboxPage extends FlowboxPage {
+export class InboxPage extends FlowlistPage {
+
     // Get the inboxList List and not a reference to the controller element
     @ViewChild('contentsListView', {read: List}) contentsList: List;
 
@@ -58,13 +59,14 @@ export class InboxPage extends FlowboxPage {
     constructor(
         theApp: App,
         theAlertCtrl: AlertController,
-        theLoadingCtrl: LoadingController,
         theModalCtrl: ModalController,
-        theNavCtrl: NavController,
         theToastCtrl: ToastController,
-        theUserData: UserData
+        theLoadingCtrl: LoadingController,
+        theNavCtrl: NavController,
+        theLoggedinProvider: LoggedinProvider,
+        theActivationsProvider: ActivationsProvider
     ) {
-        super(theApp, theAlertCtrl, theLoadingCtrl, theModalCtrl, theNavCtrl, theToastCtrl, theUserData);
+        super(theApp, theAlertCtrl, theModalCtrl, theToastCtrl, theLoadingCtrl, theNavCtrl, theLoggedinProvider, theActivationsProvider);
 
         this.flowboxTitle = "Inbox";
         this.flowboxIcon  = "mail";

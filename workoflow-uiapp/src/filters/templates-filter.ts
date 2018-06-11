@@ -32,7 +32,6 @@ permissions and limitations under the Licence.
 
 import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
-import {UserData} from '../providers/user-data';
 import {ApplicationsProvider} from '../providers/applications-provider';
 import {ActiveFilter} from './active-filter';
 import {ApplicationKeyed} from './active-filter';
@@ -42,7 +41,9 @@ import 'rxjs/add/observable/of';
 import { IApplication } from "../interfaces/flow-iapplications";
 import {Templatespec} from "../interfaces/flow-templatespecs";
 import {TemplatesProvider} from "../providers/templates-provider";
-import {IIdentityActivation} from "../interfaces/flow-iidentityactivation";
+import {IApplicationActivation} from "../interfaces/flow-iactivations";
+import {LoggedinProvider} from "../providers/loggedin-provider";
+import {ActivationsProvider} from "../providers/activations-provider";
 
 
 
@@ -54,14 +55,15 @@ export class TemplatesFilter extends ActiveFilter{
 
 
     constructor(
-        public userData: UserData,
-        public applicationsProvider: ApplicationsProvider,
+        theLoggedinProvider: LoggedinProvider,
+        theApplicationsProvider: ApplicationsProvider,
+        theActivationsProvider: ActivationsProvider,
         public templatesProvider: TemplatesProvider) {
-        super( userData, applicationsProvider);
+
+        super( theLoggedinProvider, theApplicationsProvider, theActivationsProvider);
+
         console.log("TemplatesFilter constructor");
     }
-
-
 
 
     getTemplatespecs( queryText = '' ) : Observable<Templatespec[]> {
@@ -96,15 +98,15 @@ export class TemplatesFilter extends ActiveFilter{
                                 return;
                             }
 
-                            console.log( "TemplatesFilter about to  this.userData.getIdentityActivations().then(");
+                            console.log( "TemplatesFilter about to  this.activationsProvider.getIdentityActivations().then(");
 
-                            this.userData.getIdentityActivations().then(
-                                ( theIdentityActivations: IIdentityActivation[]) => {
+                            this.activationsProvider.retrieveApplicationActivations( null, null).then(
+                                ( theApplicationActivations: IApplicationActivation[]) => {
 
-                                    console.log( "TemplatesFilter getTemplatespecs received this.userData.getIdentityActivations().then(\" theIdentityActivations.length=" + ( !theIdentityActivations ? 0 : theIdentityActivations.length));
+                                    console.log( "TemplatesFilter getTemplatespecs received this.activationsProvider.getIdentityActivations().then( theApplicationActivations.length=" + ( !theApplicationActivations ? 0 : theApplicationActivations.length));
 
-                                    if( !theIdentityActivations || !theIdentityActivations.length) {
-                                        console.log( "TemplatesFilter no or empty theIdentityActivations from this.userData.getIdentityActivations().then(");
+                                    if( !theApplicationActivations || !theApplicationActivations.length) {
+                                        console.log( "TemplatesFilter no or empty theApplicationActivations from this.activationsProvider.getIdentityActivations().then(");
                                         theObserver.next( null);
                                         theObserver.complete();
                                         return;
@@ -112,22 +114,15 @@ export class TemplatesFilter extends ActiveFilter{
 
                                     console.log( "TemplatesFilter about to  actually filter templatespecs against initiable or participed processSpecKeys of active identities in applications (according to selectors and loginApplications)");
 
-                                    let someAcceptableProcessSpecs = this.acceptableProcessSpecs( theIdentityActivations);
+                                    let someAcceptableProcessSpecs = this.acceptableProcessSpecs( theApplicationActivations);
                                     if( !someAcceptableProcessSpecs) {
                                         console.log( "TemplatesFilter no or empty this.acceptableProcessSpecs(");
                                         theObserver.next( null);
                                         theObserver.complete();
                                         return;
                                     }
-                                    const someAcceptableProcessKeys : string[] = [ ];
-
-                                    for( let aProcessSpec of someAcceptableProcessSpecs) {
-                                        if( aProcessSpec && aProcessSpec.key) {
-                                            if( someAcceptableProcessKeys.indexOf( aProcessSpec.key) < 0) {
-                                                someAcceptableProcessKeys.push( aProcessSpec.key);
-                                            }
-                                        }
-                                    }
+                                    const someAcceptableProcessKeys = someAcceptableProcessSpecs.map(
+                                        (theProcessSpec) => { return theProcessSpec.key;});
 
                                     let someFilteredTemplatespecs : Templatespec[] = [ ];
                                     for( let aTemplatespec of theTemplatespecs) {

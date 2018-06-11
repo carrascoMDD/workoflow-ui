@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="13.1">
-  <zoom_level>7</zoom_level>
+  <zoom_level>9</zoom_level>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>665</x>
-      <y>462</y>
-      <w>63</w>
-      <h>28</h>
+      <x>918</x>
+      <y>1071</y>
+      <w>81</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=-()
 m2=apps</panel_attributes>
@@ -16,10 +16,10 @@ m2=apps</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>840</x>
-      <y>238</y>
-      <w>105</w>
-      <h>42</h>
+      <x>1143</x>
+      <y>441</y>
+      <w>135</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>&lt;&lt;remote&gt;&gt;
 Courtesy
@@ -29,10 +29,10 @@ LoginsRepository</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>665</x>
-      <y>245</y>
-      <w>189</w>
-      <h>35</h>
+      <x>918</x>
+      <y>450</y>
+      <w>243</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=-()
 m2=logins
@@ -42,10 +42,10 @@ m2=logins
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>525</x>
-      <y>231</y>
-      <w>84</w>
-      <h>42</h>
+      <x>738</x>
+      <y>432</y>
+      <w>117</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>courtesy Logins
 Provider
@@ -56,23 +56,23 @@ logins</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>602</x>
-      <y>245</y>
-      <w>77</w>
-      <h>35</h>
+      <x>846</x>
+      <y>450</y>
+      <w>90</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=)-
 
 </panel_attributes>
-    <additional_attributes>80.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>70.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>525</x>
-      <y>455</y>
-      <w>84</w>
-      <h>28</h>
+      <x>747</x>
+      <y>1062</y>
+      <w>108</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>Applications
 Provider</panel_attributes>
@@ -81,23 +81,23 @@ Provider</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>602</x>
-      <y>455</y>
-      <w>77</w>
-      <h>35</h>
+      <x>846</x>
+      <y>1062</y>
+      <w>90</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=)-
 
 </panel_attributes>
-    <additional_attributes>80.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>70.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>840</x>
-      <y>182</y>
-      <w>105</w>
-      <h>42</h>
+      <x>1143</x>
+      <y>549</y>
+      <w>135</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>&lt;&lt;remote&gt;&gt;
 Authentication</panel_attributes>
@@ -106,36 +106,36 @@ Authentication</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>665</x>
-      <y>189</y>
-      <w>189</w>
-      <h>35</h>
+      <x>1017</x>
+      <y>558</y>
+      <w>144</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=-()
 m2=authenticate
 </panel_attributes>
-    <additional_attributes>250.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>140.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>602</x>
-      <y>189</y>
-      <w>77</w>
-      <h>35</h>
+      <x>945</x>
+      <y>558</y>
+      <w>90</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=)-
 
 </panel_attributes>
-    <additional_attributes>80.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>70.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>525</x>
-      <y>175</y>
-      <w>84</w>
-      <h>42</h>
+      <x>846</x>
+      <y>540</y>
+      <w>108</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>Authentication
 Provider
@@ -146,41 +146,47 @@ authentications</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>203</x>
-      <y>175</y>
-      <w>77</w>
-      <h>98</h>
+      <x>315</x>
+      <y>531</y>
+      <w>126</w>
+      <h>126</h>
     </coordinates>
     <panel_attributes>&lt;&lt;page&gt;&gt;
-Login</panel_attributes>
+Login
+--
+ionViewDidLoad
+--
+onSignup( form)
+onLogin( form)
+loginSelected()
+--
+doLogin()
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>273</x>
-      <y>238</y>
-      <w>266</w>
-      <h>35</h>
+      <x>432</x>
+      <y>441</y>
+      <w>324</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 getAllLogins()
 &lt;- Login[]</panel_attributes>
-    <additional_attributes>360.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>340.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>70</x>
-      <y>175</y>
-      <w>77</w>
-      <h>98</h>
+      <x>153</x>
+      <y>531</y>
+      <w>99</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>&lt;&lt;template&gt;&gt;
 Login
---
-courtesy login
-selector ops.
 --
 username
 password</panel_attributes>
@@ -189,75 +195,78 @@ password</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>140</x>
-      <y>182</y>
-      <w>77</w>
-      <h>28</h>
+      <x>243</x>
+      <y>540</y>
+      <w>90</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 logins</panel_attributes>
-    <additional_attributes>90.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>80.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>140</x>
-      <y>378</y>
-      <w>77</w>
-      <h>28</h>
+      <x>243</x>
+      <y>711</y>
+      <w>81</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 onLogin()</panel_attributes>
-    <additional_attributes>90.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>70.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>273</x>
-      <y>182</y>
-      <w>266</w>
-      <h>35</h>
+      <x>432</x>
+      <y>549</y>
+      <w>432</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 authenticate( username, password)
 &lt;- Authentication</panel_attributes>
-    <additional_attributes>360.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>460.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>525</x>
-      <y>336</y>
-      <w>112</w>
-      <h>56</h>
+      <x>738</x>
+      <y>612</y>
+      <w>162</w>
+      <h>108</h>
     </coordinates>
-    <panel_attributes>UserData
+    <panel_attributes>Loggedin
+provider
 --
-autentication?
-login?
-IdentityActivation[]
-</panel_attributes>
+autentication
+authenticatedLogin
+--
+getAuthenticatedLogin()
+logout()</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>273</x>
-      <y>266</y>
-      <w>266</w>
-      <h>84</h>
+      <x>432</x>
+      <y>621</y>
+      <w>324</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-login( Authentication)</panel_attributes>
-    <additional_attributes>360.0;100.0;10.0;10.0</additional_attributes>
+authenticationPerformed
+( Authentication)</panel_attributes>
+    <additional_attributes>340.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>70</x>
-      <y>518</y>
-      <w>77</w>
-      <h>49</h>
+      <x>153</x>
+      <y>1143</y>
+      <w>99</w>
+      <h>63</h>
     </coordinates>
     <panel_attributes>&lt;&lt;template&gt;&gt;
 Templates
@@ -268,10 +277,10 @@ list of templates</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>203</x>
-      <y>518</y>
-      <w>77</w>
-      <h>49</h>
+      <x>306</x>
+      <y>1143</y>
+      <w>117</w>
+      <h>63</h>
     </coordinates>
     <panel_attributes>&lt;&lt;page&gt;&gt;
 Templates
@@ -282,22 +291,22 @@ templatespecs</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>133</x>
-      <y>525</y>
-      <w>91</w>
-      <h>28</h>
+      <x>225</x>
+      <y>1152</y>
+      <w>117</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 templatespecs</panel_attributes>
-    <additional_attributes>100.0;20.0;20.0;20.0</additional_attributes>
+    <additional_attributes>90.0;20.0;30.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>672</x>
-      <y>525</y>
-      <w>63</w>
-      <h>35</h>
+      <x>927</x>
+      <y>1152</y>
+      <w>81</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=-()
 m2=templs
@@ -307,10 +316,10 @@ m2=templs
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>532</x>
-      <y>525</y>
-      <w>84</w>
-      <h>28</h>
+      <x>747</x>
+      <y>1152</y>
+      <w>108</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>Templates
 Provider</panel_attributes>
@@ -319,10 +328,10 @@ Provider</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>609</x>
-      <y>525</y>
-      <w>77</w>
-      <h>35</h>
+      <x>846</x>
+      <y>1152</y>
+      <w>99</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=)-
 
@@ -332,10 +341,10 @@ Provider</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>252</x>
-      <y>525</y>
-      <w>112</w>
-      <h>35</h>
+      <x>387</x>
+      <y>1152</y>
+      <w>144</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 getTemplatespecs()
@@ -345,56 +354,61 @@ getTemplatespecs()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>70</x>
-      <y>315</y>
-      <w>77</w>
-      <h>98</h>
+      <x>153</x>
+      <y>675</y>
+      <w>99</w>
+      <h>81</h>
     </coordinates>
     <panel_attributes>&lt;&lt;template&gt;&gt;
 Identities
 Filter
 --
-multiselector
 ApplicationKeys
-_IdentityKeys
-all
-selected
+- IdentityKeys
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>203</x>
-      <y>315</y>
-      <w>77</w>
-      <h>98</h>
+      <x>306</x>
+      <y>675</y>
+      <w>117</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>&lt;&lt;page&gt;&gt;
-Identities
-Filter</panel_attributes>
+Identities Filter
+--
+active/inactive
+--
+ionViewDidEnter()
+updateContent()
+identityActiveChanged()
+storeAndPropagateActivations()</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>273</x>
-      <y>364</y>
-      <w>266</w>
-      <h>35</h>
+      <x>414</x>
+      <y>720</y>
+      <w>342</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-getIdentityActivations()
-&lt;- IdentityActivation[]</panel_attributes>
-    <additional_attributes>10.0;20.0;360.0;20.0</additional_attributes>
+retrieveApplicationActivations()
+&lt;- ApplicationActivation[]
+
+commitActivations()</panel_attributes>
+    <additional_attributes>10.0;20.0;270.0;20.0;360.0;60.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>672</x>
-      <y>343</y>
-      <w>56</w>
-      <h>28</h>
+      <x>918</x>
+      <y>765</y>
+      <w>72</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=-()
 m2=
@@ -404,23 +418,23 @@ m2=
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>630</x>
-      <y>343</y>
-      <w>56</w>
-      <h>35</h>
+      <x>882</x>
+      <y>765</y>
+      <w>54</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=)-
 
 </panel_attributes>
-    <additional_attributes>50.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>30.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>70</x>
-      <y>70</y>
-      <w>392</w>
-      <h>84</h>
+      <x>153</x>
+      <y>0</y>
+      <w>504</w>
+      <h>108</h>
     </coordinates>
     <panel_attributes>Login page obtains list of courtesy Logins from provider. Presents selector.
 Login page on successful auth. invokes UserData with authenticated login.
@@ -434,23 +448,24 @@ UserData sets the active flag of the IdentityActivations from saved flags.</pane
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>546</x>
-      <y>266</y>
-      <w>84</w>
-      <h>84</h>
+      <x>738</x>
+      <y>477</y>
+      <w>117</w>
+      <h>153</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-getAllLogins()
-&lt;- Login[]</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+
+getAllLogins() 
+  &lt;- Login[]</panel_attributes>
+    <additional_attributes>20.0;10.0;10.0;50.0;10.0;150.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>553</x>
-      <y>70</y>
-      <w>392</w>
-      <h>84</h>
+      <x>774</x>
+      <y>0</y>
+      <w>504</w>
+      <h>108</h>
     </coordinates>
     <panel_attributes>Page IdentitiesFilter presents on/off 
 switches exposing the active flag of all the 
@@ -462,10 +477,10 @@ IdentityActivation in UserData (read/write).
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>280</x>
-      <y>455</y>
-      <w>126</w>
-      <h>28</h>
+      <x>486</x>
+      <y>1044</y>
+      <w>117</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>/ActiveFilter/</panel_attributes>
     <additional_attributes/>
@@ -473,23 +488,23 @@ IdentityActivation in UserData (read/write).
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>399</x>
-      <y>525</y>
-      <w>147</w>
-      <h>35</h>
+      <x>594</x>
+      <y>1152</y>
+      <w>171</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 getAllTemplatespecs()
 &lt;- Templatespec[]</panel_attributes>
-    <additional_attributes>190.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>170.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>399</x>
-      <y>455</y>
-      <w>133</w>
-      <h>35</h>
+      <x>594</x>
+      <y>1062</y>
+      <w>171</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 getAllApplications()
@@ -499,23 +514,24 @@ getAllApplications()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>385</x>
-      <y>385</y>
-      <w>154</w>
-      <h>84</h>
+      <x>585</x>
+      <y>900</y>
+      <w>270</w>
+      <h>162</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-getIdentityActivations()
-&lt;- IdentityActivation[]</panel_attributes>
-    <additional_attributes>10.0;100.0;200.0;10.0</additional_attributes>
+retrieveApplicationActivations()
+&lt;- ApplicationActivation[]
+setActivations)=</panel_attributes>
+    <additional_attributes>10.0;160.0;180.0;160.0;180.0;30.0;200.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>329</x>
-      <y>525</y>
-      <w>77</w>
-      <h>28</h>
+      <x>486</x>
+      <y>1152</y>
+      <w>117</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>TemplatesFilter</panel_attributes>
     <additional_attributes/>
@@ -523,10 +539,10 @@ getIdentityActivations()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>329</x>
-      <y>476</y>
-      <w>21</w>
-      <h>63</h>
+      <x>486</x>
+      <y>1089</y>
+      <w>27</w>
+      <h>81</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
@@ -534,10 +550,10 @@ getIdentityActivations()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>70</x>
-      <y>595</y>
-      <w>77</w>
-      <h>49</h>
+      <x>153</x>
+      <y>1242</y>
+      <w>99</w>
+      <h>63</h>
     </coordinates>
     <panel_attributes>&lt;&lt;template&gt;&gt;
 Inbox
@@ -548,10 +564,10 @@ list of Task</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>203</x>
-      <y>595</y>
-      <w>77</w>
-      <h>49</h>
+      <x>324</x>
+      <y>1242</y>
+      <w>99</w>
+      <h>63</h>
     </coordinates>
     <panel_attributes>&lt;&lt;page&gt;&gt;
 Inbox
@@ -562,10 +578,10 @@ inboxTasks</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>140</x>
-      <y>602</y>
-      <w>77</w>
-      <h>28</h>
+      <x>243</x>
+      <y>1251</y>
+      <w>99</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 inboxTasks</panel_attributes>
@@ -574,10 +590,10 @@ inboxTasks</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>672</x>
-      <y>602</y>
-      <w>56</w>
-      <h>35</h>
+      <x>927</x>
+      <y>1251</y>
+      <w>72</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=-()
 m2=tasks
@@ -587,10 +603,10 @@ m2=tasks
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>532</x>
-      <y>602</y>
-      <w>84</w>
-      <h>28</h>
+      <x>747</x>
+      <y>1251</y>
+      <w>108</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>Inbox
 Provider</panel_attributes>
@@ -599,10 +615,10 @@ Provider</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>609</x>
-      <y>602</y>
-      <w>77</w>
-      <h>35</h>
+      <x>846</x>
+      <y>1251</y>
+      <w>99</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=)-
 
@@ -612,10 +628,10 @@ Provider</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>252</x>
-      <y>602</y>
-      <w>112</w>
-      <h>35</h>
+      <x>387</x>
+      <y>1251</y>
+      <w>144</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 getTemplatespecs()
@@ -625,24 +641,24 @@ getTemplatespecs()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>399</x>
-      <y>602</y>
-      <w>147</w>
-      <h>42</h>
+      <x>594</x>
+      <y>1251</y>
+      <w>171</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 getTasksForGroupsAnd
 _Identities()
 &lt;- Templatespec[]</panel_attributes>
-    <additional_attributes>190.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>170.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>329</x>
-      <y>602</y>
-      <w>77</w>
-      <h>28</h>
+      <x>486</x>
+      <y>1251</y>
+      <w>117</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>InboxFilter</panel_attributes>
     <additional_attributes/>
@@ -650,10 +666,10 @@ _Identities()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>343</x>
-      <y>476</y>
-      <w>21</w>
-      <h>140</h>
+      <x>504</x>
+      <y>1089</y>
+      <w>27</w>
+      <h>180</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;180.0</additional_attributes>
@@ -661,10 +677,10 @@ _Identities()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>70</x>
-      <y>672</y>
-      <w>77</w>
-      <h>49</h>
+      <x>153</x>
+      <y>1341</y>
+      <w>99</w>
+      <h>63</h>
     </coordinates>
     <panel_attributes>&lt;&lt;template&gt;&gt;
 Drafts
@@ -675,10 +691,10 @@ list of Drafs</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>203</x>
-      <y>672</y>
-      <w>77</w>
-      <h>49</h>
+      <x>324</x>
+      <y>1341</y>
+      <w>99</w>
+      <h>63</h>
     </coordinates>
     <panel_attributes>&lt;&lt;page&gt;&gt;
 Drafts
@@ -689,10 +705,10 @@ drafts</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>140</x>
-      <y>679</y>
-      <w>77</w>
-      <h>28</h>
+      <x>243</x>
+      <y>1350</y>
+      <w>99</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 drafts</panel_attributes>
@@ -701,10 +717,10 @@ drafts</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>672</x>
-      <y>679</y>
-      <w>56</w>
-      <h>35</h>
+      <x>927</x>
+      <y>1350</y>
+      <w>72</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=-()
 m2=drafts
@@ -714,10 +730,10 @@ m2=drafts
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>532</x>
-      <y>679</y>
-      <w>84</w>
-      <h>28</h>
+      <x>747</x>
+      <y>1350</y>
+      <w>108</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>Drafts
 Provider</panel_attributes>
@@ -726,10 +742,10 @@ Provider</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>609</x>
-      <y>679</y>
-      <w>77</w>
-      <h>35</h>
+      <x>846</x>
+      <y>1350</y>
+      <w>99</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=)-
 
@@ -739,10 +755,10 @@ Provider</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>252</x>
-      <y>679</y>
-      <w>112</w>
-      <h>35</h>
+      <x>387</x>
+      <y>1350</y>
+      <w>144</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 getTemplatespecs()
@@ -752,23 +768,23 @@ getTemplatespecs()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>392</x>
-      <y>679</y>
-      <w>161</w>
-      <h>35</h>
+      <x>576</x>
+      <y>1350</y>
+      <w>207</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 getDraftsOwnedByIdentities()
 &lt;- Draft[]</panel_attributes>
-    <additional_attributes>200.0;20.0;20.0;20.0</additional_attributes>
+    <additional_attributes>190.0;20.0;30.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>329</x>
-      <y>679</y>
-      <w>77</w>
-      <h>28</h>
+      <x>486</x>
+      <y>1350</y>
+      <w>117</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>DraftsFilter</panel_attributes>
     <additional_attributes/>
@@ -776,10 +792,10 @@ getDraftsOwnedByIdentities()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>357</x>
-      <y>476</y>
-      <w>21</w>
-      <h>217</h>
+      <x>522</x>
+      <y>1089</y>
+      <w>27</w>
+      <h>279</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;290.0</additional_attributes>
@@ -787,10 +803,10 @@ getDraftsOwnedByIdentities()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>70</x>
-      <y>742</y>
-      <w>77</w>
-      <h>56</h>
+      <x>153</x>
+      <y>1431</y>
+      <w>99</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>&lt;&lt;template&gt;&gt;
 Archived
@@ -802,10 +818,10 @@ Tasks</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>203</x>
-      <y>749</y>
-      <w>77</w>
-      <h>49</h>
+      <x>324</x>
+      <y>1440</y>
+      <w>99</w>
+      <h>63</h>
     </coordinates>
     <panel_attributes>&lt;&lt;page&gt;&gt;
 Archived
@@ -816,10 +832,10 @@ archivedTasks</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>140</x>
-      <y>756</y>
-      <w>77</w>
-      <h>28</h>
+      <x>243</x>
+      <y>1449</y>
+      <w>99</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 archivedTasks</panel_attributes>
@@ -828,10 +844,10 @@ archivedTasks</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>672</x>
-      <y>756</y>
-      <w>56</w>
-      <h>35</h>
+      <x>927</x>
+      <y>1449</y>
+      <w>72</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=-()
 m2=drafts
@@ -841,10 +857,10 @@ m2=drafts
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>532</x>
-      <y>756</y>
-      <w>84</w>
-      <h>28</h>
+      <x>747</x>
+      <y>1449</y>
+      <w>108</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>Archived
 Provider</panel_attributes>
@@ -853,10 +869,10 @@ Provider</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>609</x>
-      <y>756</y>
-      <w>77</w>
-      <h>35</h>
+      <x>846</x>
+      <y>1449</y>
+      <w>99</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=)-
 
@@ -866,10 +882,10 @@ Provider</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>252</x>
-      <y>756</y>
-      <w>112</w>
-      <h>35</h>
+      <x>387</x>
+      <y>1449</y>
+      <w>144</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 getTemplatespecs()
@@ -879,24 +895,24 @@ getTemplatespecs()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>399</x>
-      <y>756</y>
-      <w>147</w>
-      <h>42</h>
+      <x>594</x>
+      <y>1449</y>
+      <w>171</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 getTasksCompleted
 _ByIdentities()
 &lt;- Draft[]</panel_attributes>
-    <additional_attributes>190.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>170.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>329</x>
-      <y>756</y>
-      <w>77</w>
-      <h>28</h>
+      <x>486</x>
+      <y>1449</y>
+      <w>117</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>ArchivedFilter</panel_attributes>
     <additional_attributes/>
@@ -904,10 +920,10 @@ _ByIdentities()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>70</x>
-      <y>910</y>
-      <w>77</w>
-      <h>63</h>
+      <x>153</x>
+      <y>1647</y>
+      <w>99</w>
+      <h>81</h>
     </coordinates>
     <panel_attributes>&lt;&lt;template&gt;&gt;
 Outbox
@@ -920,10 +936,10 @@ instances</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>203</x>
-      <y>917</y>
-      <w>77</w>
-      <h>56</h>
+      <x>324</x>
+      <y>1656</y>
+      <w>99</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>&lt;&lt;page&gt;&gt;
 Outbox
@@ -935,10 +951,10 @@ instances</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>140</x>
-      <y>924</y>
-      <w>77</w>
-      <h>28</h>
+      <x>243</x>
+      <y>1665</y>
+      <w>99</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 archivedTasks</panel_attributes>
@@ -947,10 +963,10 @@ archivedTasks</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>672</x>
-      <y>924</y>
-      <w>56</w>
-      <h>35</h>
+      <x>927</x>
+      <y>1665</y>
+      <w>72</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=-()
 m2=drafts
@@ -960,10 +976,10 @@ m2=drafts
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>532</x>
-      <y>924</y>
-      <w>84</w>
-      <h>28</h>
+      <x>747</x>
+      <y>1665</y>
+      <w>108</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>Outbox
 Provider</panel_attributes>
@@ -972,10 +988,10 @@ Provider</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>609</x>
-      <y>924</y>
-      <w>77</w>
-      <h>35</h>
+      <x>846</x>
+      <y>1665</y>
+      <w>99</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=)-
 
@@ -985,10 +1001,10 @@ Provider</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>252</x>
-      <y>924</y>
-      <w>112</w>
-      <h>35</h>
+      <x>387</x>
+      <y>1665</y>
+      <w>144</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 getTemplatespecs()
@@ -998,24 +1014,24 @@ getTemplatespecs()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>399</x>
-      <y>924</y>
-      <w>147</w>
-      <h>42</h>
+      <x>594</x>
+      <y>1665</y>
+      <w>171</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 getProcessesLaunched
 _ByIdentities()
 &lt;- Draft[]</panel_attributes>
-    <additional_attributes>190.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>170.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>329</x>
-      <y>924</y>
-      <w>77</w>
-      <h>28</h>
+      <x>486</x>
+      <y>1665</y>
+      <w>117</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>OutboxFilter</panel_attributes>
     <additional_attributes/>
@@ -1023,10 +1039,10 @@ _ByIdentities()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>371</x>
-      <y>476</y>
-      <w>21</w>
-      <h>294</h>
+      <x>540</x>
+      <y>1089</y>
+      <w>27</w>
+      <h>378</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;400.0</additional_attributes>
@@ -1034,21 +1050,21 @@ _ByIdentities()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>385</x>
-      <y>476</y>
-      <w>21</w>
-      <h>462</h>
+      <x>558</x>
+      <y>1089</y>
+      <w>27</w>
+      <h>486</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;640.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;520.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>70</x>
-      <y>826</y>
-      <w>77</w>
-      <h>56</h>
+      <x>153</x>
+      <y>1539</y>
+      <w>99</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>&lt;&lt;template&gt;&gt;
 Bounced
@@ -1060,10 +1076,10 @@ Tasks</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>203</x>
-      <y>833</y>
-      <w>77</w>
-      <h>49</h>
+      <x>324</x>
+      <y>1548</y>
+      <w>99</w>
+      <h>63</h>
     </coordinates>
     <panel_attributes>&lt;&lt;page&gt;&gt;
 Bounced
@@ -1074,10 +1090,10 @@ bouncedTasks</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>140</x>
-      <y>840</y>
-      <w>77</w>
-      <h>28</h>
+      <x>243</x>
+      <y>1557</y>
+      <w>99</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 archivedTasks</panel_attributes>
@@ -1086,10 +1102,10 @@ archivedTasks</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>672</x>
-      <y>840</y>
-      <w>56</w>
-      <h>35</h>
+      <x>927</x>
+      <y>1557</y>
+      <w>72</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=-()
 m2=drafts
@@ -1099,10 +1115,10 @@ m2=drafts
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>532</x>
-      <y>840</y>
-      <w>84</w>
-      <h>28</h>
+      <x>747</x>
+      <y>1557</y>
+      <w>108</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>Bounced
 Provider</panel_attributes>
@@ -1111,10 +1127,10 @@ Provider</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>609</x>
-      <y>840</y>
-      <w>77</w>
-      <h>35</h>
+      <x>846</x>
+      <y>1557</y>
+      <w>99</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=)-
 
@@ -1124,10 +1140,10 @@ Provider</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>252</x>
-      <y>840</y>
-      <w>112</w>
-      <h>35</h>
+      <x>387</x>
+      <y>1557</y>
+      <w>144</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 getTemplatespecs()
@@ -1137,24 +1153,24 @@ getTemplatespecs()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>399</x>
-      <y>840</y>
-      <w>147</w>
-      <h>42</h>
+      <x>594</x>
+      <y>1557</y>
+      <w>171</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 getTasksBounced
 _ByIdentities()
 &lt;- Draft[]</panel_attributes>
-    <additional_attributes>190.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>170.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>329</x>
-      <y>840</y>
-      <w>77</w>
-      <h>28</h>
+      <x>486</x>
+      <y>1557</y>
+      <w>117</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>BouncedFilter</panel_attributes>
     <additional_attributes/>
@@ -1162,10 +1178,10 @@ _ByIdentities()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>840</x>
-      <y>448</y>
-      <w>105</w>
-      <h>42</h>
+      <x>1143</x>
+      <y>1053</y>
+      <w>135</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>&lt;&lt;remote&gt;&gt;
 Applications
@@ -1175,10 +1191,10 @@ Repository</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>798</x>
-      <y>455</y>
-      <w>56</w>
-      <h>35</h>
+      <x>1089</x>
+      <y>1062</y>
+      <w>72</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=-()
 m2=apps
@@ -1188,10 +1204,10 @@ m2=apps
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>763</x>
-      <y>455</y>
-      <w>49</w>
-      <h>35</h>
+      <x>1044</x>
+      <y>1062</y>
+      <w>63</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=)-
 
@@ -1201,10 +1217,10 @@ m2=apps
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>840</x>
-      <y>518</y>
-      <w>105</w>
-      <h>42</h>
+      <x>1143</x>
+      <y>1143</y>
+      <w>135</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>&lt;&lt;remote&gt;&gt;
 Templates
@@ -1214,10 +1230,10 @@ Repository</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>798</x>
-      <y>532</y>
-      <w>63</w>
-      <h>28</h>
+      <x>1089</x>
+      <y>1161</y>
+      <w>81</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=-()
 m2=templs</panel_attributes>
@@ -1226,10 +1242,10 @@ m2=templs</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>763</x>
-      <y>525</y>
-      <w>49</w>
-      <h>35</h>
+      <x>1044</x>
+      <y>1152</y>
+      <w>63</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=)-
 
@@ -1239,17 +1255,18 @@ m2=templs</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>714</x>
-      <y>301</y>
-      <w>126</w>
-      <h>119</h>
+      <x>972</x>
+      <y>630</y>
+      <w>162</w>
+      <h>171</h>
     </coordinates>
     <panel_attributes>&lt;&lt;local&gt;&gt;
 Application and Identity
 Activation Storage
 --
-tree of:
-Applications-&gt;Identities
+tree of 
+Applications
+.. -&gt;Identities
 --
 isActive
 setActive
@@ -1261,10 +1278,10 @@ write all</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>840</x>
-      <y>595</y>
-      <w>105</w>
-      <h>42</h>
+      <x>1143</x>
+      <y>1242</y>
+      <w>135</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>&lt;&lt;remote&gt;&gt;
 Tasks
@@ -1274,10 +1291,10 @@ Repository</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>798</x>
-      <y>602</y>
-      <w>56</w>
-      <h>35</h>
+      <x>1089</x>
+      <y>1251</y>
+      <w>72</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=-()
 m2=tasks
@@ -1287,10 +1304,10 @@ m2=tasks
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>763</x>
-      <y>602</y>
-      <w>49</w>
-      <h>35</h>
+      <x>1044</x>
+      <y>1251</y>
+      <w>63</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=)-
 
@@ -1300,10 +1317,10 @@ m2=tasks
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>798</x>
-      <y>679</y>
-      <w>56</w>
-      <h>35</h>
+      <x>1089</x>
+      <y>1350</y>
+      <w>72</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=-()
 m2=drafts
@@ -1313,10 +1330,10 @@ m2=drafts
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>763</x>
-      <y>679</y>
-      <w>49</w>
-      <h>35</h>
+      <x>1044</x>
+      <y>1350</y>
+      <w>63</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=)-
 
@@ -1326,10 +1343,10 @@ m2=drafts
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>840</x>
-      <y>651</y>
-      <w>105</w>
-      <h>70</h>
+      <x>1143</x>
+      <y>1314</y>
+      <w>135</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>&lt;&lt;local&gt;&gt;
 Drafts Storage
@@ -1343,10 +1360,10 @@ write</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>798</x>
-      <y>756</y>
-      <w>56</w>
-      <h>35</h>
+      <x>1089</x>
+      <y>1449</y>
+      <w>72</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=-()
 m2=drafts
@@ -1356,10 +1373,10 @@ m2=drafts
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>763</x>
-      <y>756</y>
-      <w>49</w>
-      <h>35</h>
+      <x>1044</x>
+      <y>1449</y>
+      <w>63</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=)-
 
@@ -1369,10 +1386,10 @@ m2=drafts
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>840</x>
-      <y>749</y>
-      <w>105</w>
-      <h>42</h>
+      <x>1143</x>
+      <y>1440</y>
+      <w>135</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>&lt;&lt;remote&gt;&gt;
 Task History
@@ -1382,10 +1399,10 @@ Repository</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>798</x>
-      <y>924</y>
-      <w>56</w>
-      <h>35</h>
+      <x>1089</x>
+      <y>1665</y>
+      <w>72</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=-()
 m2=drafts
@@ -1395,10 +1412,10 @@ m2=drafts
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>763</x>
-      <y>924</y>
-      <w>49</w>
-      <h>35</h>
+      <x>1044</x>
+      <y>1665</y>
+      <w>63</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=)-
 
@@ -1408,10 +1425,10 @@ m2=drafts
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>840</x>
-      <y>917</y>
-      <w>105</w>
-      <h>42</h>
+      <x>1143</x>
+      <y>1656</y>
+      <w>135</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>&lt;&lt;remote&gt;&gt;
 Process History
@@ -1421,10 +1438,10 @@ Repository</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>798</x>
-      <y>840</y>
-      <w>56</w>
-      <h>35</h>
+      <x>1089</x>
+      <y>1557</y>
+      <w>72</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=-()
 m2=drafts
@@ -1434,10 +1451,10 @@ m2=drafts
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>763</x>
-      <y>840</y>
-      <w>49</w>
-      <h>35</h>
+      <x>1044</x>
+      <y>1557</y>
+      <w>63</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=)-
 
@@ -1447,10 +1464,10 @@ m2=drafts
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>840</x>
-      <y>833</y>
-      <w>105</w>
-      <h>42</h>
+      <x>1143</x>
+      <y>1548</y>
+      <w>135</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>&lt;&lt;remote&gt;&gt;
 Task History
@@ -1460,10 +1477,10 @@ Repository</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>714</x>
-      <y>448</y>
-      <w>56</w>
-      <h>511</h>
+      <x>981</x>
+      <y>1053</y>
+      <w>72</w>
+      <h>657</h>
     </coordinates>
     <panel_attributes>*Façade*
 --
@@ -1480,10 +1497,10 @@ Storage
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>749</x>
-      <y>980</y>
-      <w>70</w>
-      <h>28</h>
+      <x>1026</x>
+      <y>1737</y>
+      <w>90</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>&lt;&lt;browser&gt;&gt;
 IndexedDB
@@ -1493,10 +1510,10 @@ IndexedDB
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>665</x>
-      <y>980</y>
-      <w>70</w>
-      <h>28</h>
+      <x>918</x>
+      <y>1737</y>
+      <w>90</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>&lt;&lt;browser&gt;&gt;
 localStorage</panel_attributes>
@@ -1505,10 +1522,10 @@ localStorage</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>756</x>
-      <y>952</y>
-      <w>21</w>
-      <h>42</h>
+      <x>1035</x>
+      <y>1701</y>
+      <w>27</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
@@ -1516,12 +1533,412 @@ localStorage</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>714</x>
-      <y>952</y>
-      <w>21</w>
-      <h>42</h>
+      <x>981</x>
+      <y>1701</y>
+      <w>27</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>738</x>
+      <y>765</y>
+      <w>153</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>Activations
+Provider
+--
+registerInterest
+.._activationsChanged()
+propagate
+.._activationsChanged()
+retrieveApplicationActivations()
+commitActivations()
+initApplicationActivations()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>315</x>
+      <y>396</y>
+      <w>126</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;widget&gt;&gt;
+Login
+Selector
+--
+loginPage
+--
+setLoginPage()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>423</x>
+      <y>477</y>
+      <w>99</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+open
+-&gt;selection</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>306</x>
+      <y>990</y>
+      <w>117</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;page&gt;&gt;
+/Flowbox/
+--
+ionViewDidLoad()
+ionViewDidEnter()
+doRefresh()
+presentFilter()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>306</x>
+      <y>774</y>
+      <w>117</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;page&gt;&gt;
+/LoggedIn/
+--
+ionViewCanEnter()
+--
+beLoggedinOrGo
+ToLoginPage()
+--
+logout()
+--
+presentAlert()
+toast_Updated()
+openSocial()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>315</x>
+      <y>918</y>
+      <w>27</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>306</x>
+      <y>1089</y>
+      <w>27</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>342</x>
+      <y>1089</y>
+      <w>27</w>
+      <h>270</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;280.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>324</x>
+      <y>1089</y>
+      <w>27</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>360</x>
+      <y>1089</y>
+      <w>27</w>
+      <h>369</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;390.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>576</x>
+      <y>1089</y>
+      <w>27</w>
+      <h>594</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;640.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>396</x>
+      <y>1089</y>
+      <w>27</w>
+      <h>585</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;630.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>378</x>
+      <y>1089</y>
+      <w>27</w>
+      <h>477</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;510.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>153</x>
+      <y>1026</y>
+      <w>99</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;widget&gt;&gt;
+FlowHeader
+--
+flowPage
+--
+setFlowPage()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>243</x>
+      <y>1071</y>
+      <w>81</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;</panel_attributes>
+    <additional_attributes>70.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>414</x>
+      <y>693</y>
+      <w>468</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+
+
+
+
+getAuthenticatedLogin()                                         . 
+&lt;- Login                                            . 
+logout()                                                                  .  </panel_attributes>
+    <additional_attributes>360.0;10.0;330.0;10.0;330.0;130.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>153</x>
+      <y>801</y>
+      <w>99</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;widget&gt;&gt;
+Alert</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>153</x>
+      <y>846</y>
+      <w>99</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;widget&gt;&gt;
+Toast</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>153</x>
+      <y>891</y>
+      <w>99</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;widget&gt;&gt;
+Social</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>243</x>
+      <y>810</y>
+      <w>81</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;</panel_attributes>
+    <additional_attributes>70.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>243</x>
+      <y>855</y>
+      <w>81</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;</panel_attributes>
+    <additional_attributes>70.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>243</x>
+      <y>900</y>
+      <w>81</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;</panel_attributes>
+    <additional_attributes>70.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>405</x>
+      <y>810</y>
+      <w>117</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+     beLoggedinOr
+      GoToLoginPage()</panel_attributes>
+    <additional_attributes>20.0;10.0;60.0;10.0;60.0;40.0;20.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>333</x>
+      <y>918</y>
+      <w>99</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+beLoggedin
+OrGoTo
+LoginPage()</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>405</x>
+      <y>846</y>
+      <w>117</w>
+      <h>243</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+     beLoggedinOr
+      GoToLoginPage()</panel_attributes>
+    <additional_attributes>20.0;250.0;60.0;250.0;60.0;10.0;20.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>315</x>
+      <y>477</y>
+      <w>117</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+setLoginPage()</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>243</x>
+      <y>747</y>
+      <w>81</w>
+      <h>279</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+open
+</panel_attributes>
+    <additional_attributes>70.0;290.0;50.0;290.0;50.0;220.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>801</x>
+      <y>711</y>
+      <w>108</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+getAllLogins()
+&lt;- Login[]</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>153</x>
+      <y>135</y>
+      <w>1125</w>
+      <h>234</h>
+    </coordinates>
+    <panel_attributes>courtesy Logins
+WorkOFlowApp
+--
+@ViewChild(Nav) nav
+rootPage: any
+PageInterface[] constants
+. . flowPages
+. . loggedInPages
+. . loggedOutPages
+--
+constructor( inject Events, LoggedinProvider, MenuController, Platform, Storage, SplashScreen
+openPage
+logout
+openTutorial
+enableMenu
+platformReady
+isActive(PageInterace)</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>

@@ -30,7 +30,7 @@ permissions and limitations under the Licence.
  *
  */
 
-import {Component, ViewChild} from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import {
     AlertController,
     App,
@@ -39,46 +39,56 @@ import {
     NavController,
     ToastController,
     LoadingController
-} from 'ionic-angular';
+}                               from 'ionic-angular';
+import { ActivationsProvider }  from "../../../providers/activations-provider";
 
-import {UserData} from '../../../providers/user-data';
+import { LoggedinProvider } from "../../../providers/loggedin-provider";
+import { FlowlistPage }     from "../flowlist/flowlist";
 
-import {FlowboxPage} from "../flowbox/flowbox";
 
-@Component({
-    selector: 'page-outbox',
-    templateUrl: 'outbox.html'
-})
-export class OutboxPage extends FlowboxPage {
+
+
+
+
+@Component(
+    {
+        selector:    'page-outbox',
+        templateUrl: 'outbox.html'
+    } )
+export class OutboxPage extends FlowlistPage {
+
     // Get the inboxList List and not a reference to the controller element
-    @ViewChild('contentsListView', {read: List}) contentsList: List;
+    @ViewChild( 'contentsListView', { read: List } ) contentsList: List;
+
 
 
     constructor(
         theApp: App,
         theAlertCtrl: AlertController,
-        theLoadingCtrl: LoadingController,
         theModalCtrl: ModalController,
-        theNavCtrl: NavController,
         theToastCtrl: ToastController,
-        theUserData: UserData
+        theLoadingCtrl: LoadingController,
+        theNavCtrl: NavController,
+        theLoggedinProvider: LoggedinProvider,
+        theActivationsProvider: ActivationsProvider
     ) {
-        super(theApp, theAlertCtrl, theLoadingCtrl, theModalCtrl, theNavCtrl, theToastCtrl, theUserData);
+        super( theApp, theAlertCtrl, theModalCtrl, theToastCtrl, theLoadingCtrl, theNavCtrl, theLoggedinProvider, theActivationsProvider);
 
         this.flowboxTitle = "Outbox";
         this.flowboxIcon  = "send";
-        this.segment = "all";
-        this.queryText = "";
+        this.segment      = "all";
+        this.queryText    = "";
 
-        console.log( this.flowboxTitle + " constructor");
+        console.log( this.flowboxTitle + " constructor" );
     }
 
 
 
+
     updateContent(): Promise<any> {
-        return new Promise<any>((resolve) => {
+        return new Promise<any>( ( resolve ) => {
             resolve();
-        });
+        } );
     }
 
 }
